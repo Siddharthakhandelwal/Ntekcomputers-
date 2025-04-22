@@ -1,26 +1,18 @@
 {
   "version": 2,
+  "buildCommand": "npm run build",
+  "outputDirectory": "dist/public",
+  "installCommand": "npm install",
   "builds": [
     {
       "src": "server/index.ts",
       "use": "@vercel/node"
-    },
-    {
-      "src": "package.json",
-      "use": "@vercel/static-build",
-      "config": {
-        "distDir": "dist/public",
-        "buildCommand": "npm run build"
-      }
     }
   ],
   "routes": [
     {
       "src": "/api/(.*)",
       "dest": "/server/index.ts"
-    },
-    {
-      "handle": "filesystem"
     },
     {
       "src": "/(.*)",
