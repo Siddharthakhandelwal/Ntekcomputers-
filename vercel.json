@@ -5,18 +5,22 @@
   "installCommand": "npm install",
   "builds": [
     {
-      "src": "server/index.ts",
+      "src": "api/**/*.ts",
       "use": "@vercel/node"
+    },
+    {
+      "src": "client/**/*",
+      "use": "@vercel/static"
     }
   ],
   "routes": [
     {
       "src": "/api/(.*)",
-      "dest": "/server/index.ts"
+      "dest": "/api/$1"
     },
     {
       "src": "/(.*)",
-      "dest": "/server/index.ts"
+      "dest": "/client/$1"
     }
   ],
   "env": {
