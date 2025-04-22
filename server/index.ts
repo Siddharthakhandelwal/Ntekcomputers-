@@ -1,10 +1,14 @@
 import express, { type Request, Response, NextFunction } from "express";
 import { registerRoutes } from "./routes";
 import { setupVite, serveStatic, log } from "./vite";
+import path from "path";
 
 const app = express();
 app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
+
+// Serve static files from the dist/public directory
+app.use(express.static(path.join(process.cwd(), "dist/public")));
 
 app.use((req, res, next) => {
   const start = Date.now();
@@ -55,6 +59,11 @@ app.use((req, res, next) => {
   } else {
     serveStatic(app);
   }
+
+  // Catch-all route to handle client-side routing
+  app.get("*", (req, res) => {
+    res.sendFile(path.join(process.cwd(), "dist/public/index.html"));
+  });
 
   // ALWAYS serve the app on port 4000
   // this serves both the API and the client.
