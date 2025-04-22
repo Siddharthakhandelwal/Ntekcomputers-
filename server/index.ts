@@ -65,11 +65,26 @@ app.use((req, res, next) => {
     res.sendFile(path.join(process.cwd(), "dist/public/index.html"));
   });
 
-  // ALWAYS serve the app on port 4000
-  // this serves both the API and the client.
-  // It is the only port that is not firewalled.
-  const port = 4000;
-  server.listen(port, () => {
-    log(`serving on port ${port}`);
-  });
+  // Use environment port or default to 4000
+  const port = process.env.PORT ? parseInt(process.env.PORT) : 4000;
+  const host = process.env.NODE_ENV === "production" ? "0.0.0.0" : "localhost";
+
+  try {
+    server.listen(port, host, () => {
+      log(
+        `Server running at http://${
+          host === "0.0.0.0" ? "localhost" : host
+        }:${port}`
+      );
+    });
+  } catch (error) {
+    // Fallback to localhost if binding to 0.0.0.0 fails
+    if (error.code === "ENOTSUP" && host === "0.0.0.0") {
+      server.listen(port, "localhost", () => {
+        log(`Server running at http://localhost:${port}`);
+      });
+    } else {
+      throw error;
+    }
+  }
 })();
