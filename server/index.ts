@@ -77,8 +77,8 @@ app.use((req, res, next) => {
         }:${port}`
       );
     });
-  } catch (error) {
-    // Fallback to localhost if binding to 0.0.0.0 fails
+  } catch (err) {
+    const error = err as { code?: string };
     if (error.code === "ENOTSUP" && host === "0.0.0.0") {
       server.listen(port, "localhost", () => {
         log(`Server running at http://localhost:${port}`);

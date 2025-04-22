@@ -51,7 +51,8 @@ async function testSupabaseConnection() {
 
     console.log("✅ Successfully connected to Supabase!");
     console.log("✅ Test record inserted:", insertData);
-  } catch (error) {
+  } catch (err) {
+    const error = err as { message?: string; details?: string; hint?: string };
     console.error("❌ Error:", error.message);
     if (error.details) console.error("Details:", error.details);
     if (error.hint) console.error("Hint:", error.hint);
