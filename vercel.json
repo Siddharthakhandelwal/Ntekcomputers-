@@ -18,8 +18,9 @@
   ],
   "routes": [
     {
-      "src": "/api/(.*)",
-      "dest": "/api/$1"
+      "src": "/api/contact",
+      "methods": ["POST", "GET"],
+      "dest": "/api/contact.ts"
     },
     {
       "src": "/assets/(.*)",
