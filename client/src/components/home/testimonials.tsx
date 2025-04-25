@@ -79,11 +79,28 @@ export default function Testimonials() {
   };
 
   return (
-    <div className="bg-pattern py-16">
-      <div className="container mx-auto px-4">
-        <h2 className="text-center text-3xl font-bold mb-12">
-          What Our Clients Say
-        </h2>
+    <div className="bg-white py-20 relative">
+      {/* Background decorative elements */}
+      <div className="absolute inset-0 overflow-hidden opacity-10 pointer-events-none">
+        <div className="absolute top-1/3 left-1/4 w-32 h-32 rounded-full border-4 border-blue-300 border-dashed"></div>
+        <div className="absolute bottom-1/4 right-1/3 w-40 h-40 rounded-full border-4 border-amber-300 border-dashed"></div>
+
+        <div className="absolute top-1/4 right-1/4 w-3 h-3 bg-cyan-500 rounded-full animate-pulse-slow"></div>
+        <div className="absolute top-1/3 right-1/5 w-2 h-2 bg-magenta-500 rounded-full animate-pulse-slow"></div>
+        <div className="absolute bottom-1/4 left-1/5 w-4 h-4 bg-yellow-500 rounded-full animate-pulse-slow"></div>
+      </div>
+
+      <div className="container mx-auto px-4 relative z-10">
+        <div className="max-w-3xl mx-auto text-center mb-12">
+          <h2 className="text-3xl font-bold mb-6 relative inline-block">
+            What Our Clients Say
+            <span className="absolute bottom-0 left-1/2 transform -translate-x-1/2 w-24 h-1 bg-blue-500 rounded-full"></span>
+          </h2>
+          <p className="text-gray-600 mt-4">
+            Hear from our satisfied clients about their experience working with
+            N Tek Computers
+          </p>
+        </div>
 
         <div className="relative">
           <div className="overflow-hidden">
@@ -104,7 +121,7 @@ export default function Testimonials() {
                     width: `${(100 / testimonials.length) * visibleSlides}%`,
                   }}
                 >
-                  <div className="bg-white rounded-lg shadow-md p-6 h-full">
+                  <div className="bg-white rounded-lg shadow-md p-6 h-full border border-gray-100 hover:shadow-xl transition-all duration-300 transform hover:-translate-y-2">
                     <div className="flex items-center mb-4">
                       <div className="flex text-amber-500">
                         {renderStars(testimonial.rating)}
@@ -114,7 +131,9 @@ export default function Testimonials() {
                       "{testimonial.content}"
                     </p>
                     <div className="flex items-center">
-                      <div className="w-12 h-12 rounded-full bg-gray-300 mr-4"></div>
+                      <div className="w-12 h-12 rounded-full bg-blue-100 text-blue-600 mr-4 flex items-center justify-center font-bold">
+                        {testimonial.author.charAt(0)}
+                      </div>
                       <div>
                         <p className="font-semibold">{testimonial.author}</p>
                         <p className="text-sm text-gray-500">
@@ -132,7 +151,7 @@ export default function Testimonials() {
             <Button
               variant="outline"
               size="icon"
-              className="absolute top-1/2 left-0 -translate-y-1/2 bg-white rounded-full shadow-md ml-2 z-10"
+              className="absolute top-1/2 left-0 -translate-y-1/2 bg-white rounded-full shadow-md ml-2 z-10 border border-blue-100 hover:border-blue-300"
               onClick={prevSlide}
             >
               <ChevronLeft className="h-5 w-5" />
@@ -143,7 +162,7 @@ export default function Testimonials() {
             <Button
               variant="outline"
               size="icon"
-              className="absolute top-1/2 right-0 -translate-y-1/2 bg-white rounded-full shadow-md mr-2 z-10"
+              className="absolute top-1/2 right-0 -translate-y-1/2 bg-white rounded-full shadow-md mr-2 z-10 border border-blue-100 hover:border-blue-300"
               onClick={nextSlide}
             >
               <ChevronRight className="h-5 w-5" />

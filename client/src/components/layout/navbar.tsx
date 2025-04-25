@@ -1,6 +1,6 @@
 import { useState, useEffect } from "react";
 import { Link, useLocation } from "wouter";
-import { Menu, X } from "lucide-react";
+import { Menu, X, Layers, MessageSquare, Info } from "lucide-react";
 import { Button } from "@/components/ui/button";
 
 export default function Navbar() {
@@ -56,13 +56,13 @@ export default function Navbar() {
           </Link>
 
           {/* Desktop Menu */}
-          <nav className="hidden md:flex space-x-8">
+          <nav className="hidden md:flex space-x-6">
             <Link href="/">
               <a
-                className={`font-medium transition-colors ${
+                className={`font-medium transition-all hover:-translate-y-1 px-2 py-1 rounded ${
                   isActive("/")
-                    ? "text-blue-500"
-                    : "text-gray-800 hover:text-blue-500"
+                    ? "text-blue-500 font-semibold"
+                    : "text-gray-800 hover:text-blue-500 hover:bg-blue-50"
                 }`}
               >
                 Home
@@ -70,35 +70,47 @@ export default function Navbar() {
             </Link>
             <Link href="/services">
               <a
-                className={`font-medium transition-colors ${
+                className={`font-medium transition-all hover:-translate-y-1 px-3 py-1 rounded-md flex items-center ${
                   isActive("/services")
-                    ? "text-blue-500"
-                    : "text-gray-800 hover:text-blue-500"
+                    ? "text-blue-600 bg-blue-50 font-semibold shadow-sm"
+                    : "text-gray-800 hover:text-blue-600 hover:bg-blue-50"
                 }`}
               >
+                <Layers className="mr-1 h-4 w-4" />
                 Services
+                {isActive("/services") && (
+                  <span className="w-1 h-1 bg-blue-500 rounded-full ml-1 animate-pulse"></span>
+                )}
               </a>
             </Link>
             <Link href="/about">
               <a
-                className={`font-medium transition-colors ${
+                className={`font-medium transition-all hover:-translate-y-1 px-3 py-1 rounded-md flex items-center ${
                   isActive("/about")
-                    ? "text-blue-500"
-                    : "text-gray-800 hover:text-blue-500"
+                    ? "text-blue-600 bg-blue-50 font-semibold shadow-sm"
+                    : "text-gray-800 hover:text-blue-600 hover:bg-blue-50"
                 }`}
               >
+                <Info className="mr-1 h-4 w-4" />
                 About
+                {isActive("/about") && (
+                  <span className="w-1 h-1 bg-blue-500 rounded-full ml-1 animate-pulse"></span>
+                )}
               </a>
             </Link>
             <Link href="/contact">
               <a
-                className={`font-medium transition-colors ${
+                className={`font-medium transition-all hover:-translate-y-1 px-3 py-1 rounded-md flex items-center ${
                   isActive("/contact")
-                    ? "text-blue-500"
-                    : "text-gray-800 hover:text-blue-500"
+                    ? "text-blue-600 bg-blue-50 font-semibold shadow-sm"
+                    : "text-gray-800 hover:text-blue-600 hover:bg-blue-50"
                 }`}
               >
+                <MessageSquare className="mr-1 h-4 w-4" />
                 Contact
+                {isActive("/contact") && (
+                  <span className="w-1 h-1 bg-blue-500 rounded-full ml-1 animate-pulse"></span>
+                )}
               </a>
             </Link>
           </nav>
@@ -121,13 +133,13 @@ export default function Navbar() {
 
       {/* Mobile Menu */}
       {mobileMenuOpen && (
-        <div className="md:hidden bg-white">
+        <div className="md:hidden bg-white shadow-lg">
           <div className="container mx-auto px-4 py-3 flex flex-col space-y-4">
             <Link href="/">
               <a
-                className={`font-medium py-2 border-b border-gray-100 ${
+                className={`font-medium py-2 border-b border-gray-100 flex items-center ${
                   isActive("/")
-                    ? "text-blue-500"
+                    ? "text-blue-500 font-semibold"
                     : "text-gray-800 hover:text-blue-500"
                 }`}
                 onClick={() => setMobileMenuOpen(false)}
@@ -137,38 +149,38 @@ export default function Navbar() {
             </Link>
             <Link href="/services">
               <a
-                className={`font-medium py-2 border-b border-gray-100 ${
+                className={`font-medium py-2 border-b border-gray-100 flex items-center ${
                   isActive("/services")
-                    ? "text-blue-500"
+                    ? "text-blue-500 font-semibold"
                     : "text-gray-800 hover:text-blue-500"
                 }`}
                 onClick={() => setMobileMenuOpen(false)}
               >
-                Services
+                <Layers className="mr-2 h-5 w-5" /> Services
               </a>
             </Link>
             <Link href="/about">
               <a
-                className={`font-medium py-2 border-b border-gray-100 ${
+                className={`font-medium py-2 border-b border-gray-100 flex items-center ${
                   isActive("/about")
-                    ? "text-blue-500"
+                    ? "text-blue-500 font-semibold"
                     : "text-gray-800 hover:text-blue-500"
                 }`}
                 onClick={() => setMobileMenuOpen(false)}
               >
-                About
+                <Info className="mr-2 h-5 w-5" /> About
               </a>
             </Link>
             <Link href="/contact">
               <a
-                className={`font-medium py-2 ${
+                className={`font-medium py-2 flex items-center ${
                   isActive("/contact")
-                    ? "text-blue-500"
+                    ? "text-blue-500 font-semibold"
                     : "text-gray-800 hover:text-blue-500"
                 }`}
                 onClick={() => setMobileMenuOpen(false)}
               >
-                Contact
+                <MessageSquare className="mr-2 h-5 w-5" /> Contact
               </a>
             </Link>
           </div>

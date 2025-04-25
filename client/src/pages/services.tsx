@@ -70,10 +70,42 @@ export default function Services() {
   }, []);
 
   return (
-    <div>
-      <div className="container mx-auto px-4 py-16">
-        <h1 className="text-center text-3xl font-bold mb-4 font-sans">
+    <div className="relative bg-white pt-20 pb-16">
+      {/* Background decorative elements */}
+      <div className="absolute inset-0 overflow-hidden opacity-10 pointer-events-none">
+        <div className="absolute top-20 left-10 w-40 h-40 rounded-full border-8 border-blue-500 border-dashed animate-spin-slow"></div>
+        <div className="absolute bottom-10 right-10 w-60 h-60 rounded-full border-8 border-amber-500 border-dashed animate-spin-slow-reverse"></div>
+        <div className="absolute top-1/4 right-1/4 w-20 h-20 transform rotate-45 bg-cyan-500"></div>
+        <div className="absolute bottom-1/4 left-1/4 w-32 h-32 transform -rotate-12 bg-magenta-500"></div>
+
+        {/* Print registration marks */}
+        <div className="absolute top-60 right-40 flex items-center justify-center">
+          <div className="w-12 h-12">
+            <div className="absolute top-0 right-0 w-4 h-1 bg-blue-500"></div>
+            <div className="absolute top-0 right-0 h-4 w-1 bg-blue-500"></div>
+          </div>
+        </div>
+
+        <div className="absolute bottom-60 left-40 flex items-center justify-center">
+          <div className="w-12 h-12">
+            <div className="absolute bottom-0 left-0 w-4 h-1 bg-blue-500"></div>
+            <div className="absolute bottom-0 left-0 h-4 w-1 bg-blue-500"></div>
+          </div>
+        </div>
+      </div>
+
+      {/* CMYK color strip at top */}
+      <div className="flex h-2 w-full absolute top-0">
+        <div className="w-1/4 bg-cyan-500"></div>
+        <div className="w-1/4 bg-magenta-500"></div>
+        <div className="w-1/4 bg-yellow-400"></div>
+        <div className="w-1/4 bg-blue-600"></div>
+      </div>
+
+      <div className="container mx-auto px-4 py-16 relative z-10">
+        <h1 className="text-center text-4xl font-bold mb-6 relative inline-block mx-auto flex justify-center w-full">
           Our Services
+          <span className="absolute bottom-0 left-1/2 transform -translate-x-1/2 w-24 h-1 bg-blue-500 rounded-full"></span>
         </h1>
         <div className="text-center text-gray-600 mb-12 max-w-2xl mx-auto">
           <p className="mb-4">

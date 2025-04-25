@@ -7,41 +7,85 @@ import {
   MapPin,
   Phone,
   Mail,
+  Printer,
+  PenTool,
+  Layers,
 } from "lucide-react";
 
 export default function Footer() {
   return (
-    <footer className="bg-gray-900 text-white">
-      <div className="container mx-auto px-4 py-12">
+    <footer className="relative bg-white text-gray-800 overflow-hidden">
+      {/* Printing-themed elements */}
+      <div className="absolute inset-0 overflow-hidden opacity-5 pointer-events-none">
+        <div className="absolute top-10 left-10 w-20 h-20 rounded-sm border-2 border-cyan-400 rotate-45"></div>
+        <div className="absolute bottom-40 right-10 w-16 h-16 rounded-sm border-2 border-magenta-500 rotate-12"></div>
+        <div className="absolute top-60 right-40 w-24 h-24 rounded-sm border-2 border-yellow-400 -rotate-12"></div>
+
+        {/* Print registration marks */}
+        <div className="absolute top-10 right-10">
+          <div className="w-10 h-10">
+            <div className="absolute top-0 right-0 w-4 h-1 bg-blue-500"></div>
+            <div className="absolute top-0 right-0 h-4 w-1 bg-blue-500"></div>
+          </div>
+        </div>
+
+        <div className="absolute bottom-10 left-10">
+          <div className="w-10 h-10">
+            <div className="absolute bottom-0 left-0 w-4 h-1 bg-blue-500"></div>
+            <div className="absolute bottom-0 left-0 h-4 w-1 bg-blue-500"></div>
+          </div>
+        </div>
+
+        {/* Dots pattern */}
+        <div className="absolute right-20 top-20 flex space-x-3">
+          <div className="w-3 h-3 bg-cyan-500 rounded-full"></div>
+          <div className="w-3 h-3 bg-magenta-500 rounded-full"></div>
+          <div className="w-3 h-3 bg-yellow-400 rounded-full"></div>
+          <div className="w-3 h-3 bg-blue-500 rounded-full"></div>
+        </div>
+      </div>
+
+      {/* CMYK color strip at top */}
+      <div className="flex h-2 w-full">
+        <div className="w-1/4 bg-cyan-500"></div>
+        <div className="w-1/4 bg-magenta-500"></div>
+        <div className="w-1/4 bg-yellow-400"></div>
+        <div className="w-1/4 bg-blue-600"></div>
+      </div>
+
+      <div className="container mx-auto px-4 py-12 relative z-10">
         <div className="grid md:grid-cols-4 gap-8">
           <div>
-            <h3 className="text-xl font-bold mb-4">N Tek Computers</h3>
-            <p className="text-gray-400 mb-4">
+            <h3 className="text-xl font-bold mb-4 flex items-center">
+              <Printer className="h-5 w-5 mr-2 text-blue-600" />
+              <span>N Tek Computers</span>
+            </h3>
+            <p className="text-gray-600 mb-4">
               Professional printing services for all your business and personal
               needs.
             </p>
             <div className="flex space-x-4">
               <a
                 href="#"
-                className="text-gray-400 hover:text-white transition-colors"
+                className="text-gray-400 hover:text-blue-600 transition-colors transform hover:scale-110"
               >
                 <Facebook className="h-5 w-5" />
               </a>
               <a
                 href="#"
-                className="text-gray-400 hover:text-white transition-colors"
+                className="text-gray-400 hover:text-blue-600 transition-colors transform hover:scale-110"
               >
                 <Twitter className="h-5 w-5" />
               </a>
               <a
                 href="#"
-                className="text-gray-400 hover:text-white transition-colors"
+                className="text-gray-400 hover:text-blue-600 transition-colors transform hover:scale-110"
               >
                 <Instagram className="h-5 w-5" />
               </a>
               <a
                 href="#"
-                className="text-gray-400 hover:text-white transition-colors"
+                className="text-gray-400 hover:text-blue-600 transition-colors transform hover:scale-110"
               >
                 <Linkedin className="h-5 w-5" />
               </a>
@@ -49,33 +93,48 @@ export default function Footer() {
           </div>
 
           <div>
-            <h4 className="text-lg font-semibold mb-4">Quick Links</h4>
+            <h4 className="text-lg font-semibold mb-4 flex items-center">
+              <Layers className="h-4 w-4 mr-2 text-cyan-500" />
+              <span>Quick Links</span>
+            </h4>
             <ul className="space-y-2">
               <li>
                 <Link href="/">
-                  <a className="text-gray-400 hover:text-white transition-colors">
-                    Home
+                  <a className="text-gray-600 hover:text-cyan-500 transition-colors flex items-center group">
+                    <span className="w-1.5 h-1.5 bg-cyan-500 rounded-full mr-2 group-hover:animate-pulse"></span>
+                    <span className="group-hover:translate-x-1 transition-transform">
+                      Home
+                    </span>
                   </a>
                 </Link>
               </li>
               <li>
                 <Link href="/services">
-                  <a className="text-gray-400 hover:text-white transition-colors">
-                    Services
+                  <a className="text-gray-600 hover:text-cyan-500 transition-colors flex items-center group">
+                    <span className="w-1.5 h-1.5 bg-cyan-500 rounded-full mr-2 group-hover:animate-pulse"></span>
+                    <span className="group-hover:translate-x-1 transition-transform">
+                      Services
+                    </span>
                   </a>
                 </Link>
               </li>
               <li>
                 <Link href="/about">
-                  <a className="text-gray-400 hover:text-white transition-colors">
-                    About Us
+                  <a className="text-gray-600 hover:text-cyan-500 transition-colors flex items-center group">
+                    <span className="w-1.5 h-1.5 bg-cyan-500 rounded-full mr-2 group-hover:animate-pulse"></span>
+                    <span className="group-hover:translate-x-1 transition-transform">
+                      About Us
+                    </span>
                   </a>
                 </Link>
               </li>
               <li>
                 <Link href="/contact">
-                  <a className="text-gray-400 hover:text-white transition-colors">
-                    Contact
+                  <a className="text-gray-600 hover:text-cyan-500 transition-colors flex items-center group">
+                    <span className="w-1.5 h-1.5 bg-cyan-500 rounded-full mr-2 group-hover:animate-pulse"></span>
+                    <span className="group-hover:translate-x-1 transition-transform">
+                      Contact
+                    </span>
                   </a>
                 </Link>
               </li>
@@ -83,47 +142,68 @@ export default function Footer() {
           </div>
 
           <div>
-            <h4 className="text-lg font-semibold mb-4">Services</h4>
+            <h4 className="text-lg font-semibold mb-4 flex items-center">
+              <PenTool className="h-4 w-4 mr-2 text-magenta-500" />
+              <span>Services</span>
+            </h4>
             <ul className="space-y-2">
               <li>
                 <Link href="/services">
-                  <a className="text-gray-400 hover:text-white transition-colors">
-                    Digital Printing
+                  <a className="text-gray-600 hover:text-magenta-500 transition-colors flex items-center group">
+                    <span className="w-1.5 h-1.5 bg-magenta-500 rounded-full mr-2 group-hover:animate-pulse"></span>
+                    <span className="group-hover:translate-x-1 transition-transform">
+                      Digital Printing
+                    </span>
                   </a>
                 </Link>
               </li>
               <li>
                 <Link href="/services">
-                  <a className="text-gray-400 hover:text-white transition-colors">
-                    Large Format Printing
+                  <a className="text-gray-600 hover:text-magenta-500 transition-colors flex items-center group">
+                    <span className="w-1.5 h-1.5 bg-magenta-500 rounded-full mr-2 group-hover:animate-pulse"></span>
+                    <span className="group-hover:translate-x-1 transition-transform">
+                      Large Format Printing
+                    </span>
                   </a>
                 </Link>
               </li>
               <li>
                 <Link href="/services">
-                  <a className="text-gray-400 hover:text-white transition-colors">
-                    Business Stationery
+                  <a className="text-gray-600 hover:text-magenta-500 transition-colors flex items-center group">
+                    <span className="w-1.5 h-1.5 bg-magenta-500 rounded-full mr-2 group-hover:animate-pulse"></span>
+                    <span className="group-hover:translate-x-1 transition-transform">
+                      Business Stationery
+                    </span>
                   </a>
                 </Link>
               </li>
               <li>
                 <Link href="/services">
-                  <a className="text-gray-400 hover:text-white transition-colors">
-                    Marketing Materials
+                  <a className="text-gray-600 hover:text-magenta-500 transition-colors flex items-center group">
+                    <span className="w-1.5 h-1.5 bg-magenta-500 rounded-full mr-2 group-hover:animate-pulse"></span>
+                    <span className="group-hover:translate-x-1 transition-transform">
+                      Marketing Materials
+                    </span>
                   </a>
                 </Link>
               </li>
               <li>
                 <Link href="/services">
-                  <a className="text-gray-400 hover:text-white transition-colors">
-                    Custom Packaging
+                  <a className="text-gray-600 hover:text-magenta-500 transition-colors flex items-center group">
+                    <span className="w-1.5 h-1.5 bg-magenta-500 rounded-full mr-2 group-hover:animate-pulse"></span>
+                    <span className="group-hover:translate-x-1 transition-transform">
+                      Custom Packaging
+                    </span>
                   </a>
                 </Link>
               </li>
               <li>
                 <Link href="/services">
-                  <a className="text-gray-400 hover:text-white transition-colors">
-                    Branding Services
+                  <a className="text-gray-600 hover:text-magenta-500 transition-colors flex items-center group">
+                    <span className="w-1.5 h-1.5 bg-magenta-500 rounded-full mr-2 group-hover:animate-pulse"></span>
+                    <span className="group-hover:translate-x-1 transition-transform">
+                      Branding Services
+                    </span>
                   </a>
                 </Link>
               </li>
@@ -131,28 +211,35 @@ export default function Footer() {
           </div>
 
           <div>
-            <h4 className="text-lg font-semibold mb-4">Contact Information</h4>
-            <ul className="space-y-2">
-              <li className="flex items-start">
-                <MapPin className="h-5 w-5 mr-2 mt-0.5 flex-shrink-0" />
-                <span className="text-gray-400">
+            <h4 className="text-lg font-semibold mb-4 flex items-center">
+              <span className="w-4 h-4 bg-yellow-400 rounded-sm mr-2"></span>
+              Contact Information
+            </h4>
+            <ul className="space-y-3">
+              <li className="flex items-start group">
+                <MapPin className="h-5 w-5 mr-2 mt-0.5 flex-shrink-0 text-yellow-500 group-hover:text-yellow-600 transition-colors" />
+                <span className="text-gray-600 group-hover:text-gray-800 transition-colors">
                   35 B Adarsh Nagar, Jalandhar, Punjab 144002
                 </span>
               </li>
-              <li className="flex items-start">
-                <Phone className="h-5 w-5 mr-2 mt-0.5 flex-shrink-0" />
-                <span className="text-gray-400">+91-9818156734</span>
+              <li className="flex items-start group">
+                <Phone className="h-5 w-5 mr-2 mt-0.5 flex-shrink-0 text-yellow-500 group-hover:text-yellow-600 transition-colors" />
+                <span className="text-gray-600 group-hover:text-gray-800 transition-colors">
+                  +91-9818156734
+                </span>
               </li>
-              <li className="flex items-start">
-                <Mail className="h-5 w-5 mr-2 mt-0.5 flex-shrink-0" />
-                <span className="text-gray-400">N.Tek.Computers@gmail.com</span>
+              <li className="flex items-start group">
+                <Mail className="h-5 w-5 mr-2 mt-0.5 flex-shrink-0 text-yellow-500 group-hover:text-yellow-600 transition-colors" />
+                <span className="text-gray-600 group-hover:text-gray-800 transition-colors">
+                  ntekcomputers@yahoo.co.in
+                </span>
               </li>
             </ul>
           </div>
         </div>
 
-        <div className="border-t border-gray-800 mt-12 pt-8 text-center">
-          <p className="text-gray-400">
+        <div className="mt-12 pt-8 text-center">
+          <p className="text-gray-500">
             &copy; {new Date().getFullYear()} N Tek Computers. All rights
             reserved.
           </p>

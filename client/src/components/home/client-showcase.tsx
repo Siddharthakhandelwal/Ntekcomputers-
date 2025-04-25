@@ -8,28 +8,18 @@ import {
   School,
   Church,
   Hospital,
+  Factory,
 } from "lucide-react";
 
 export default function ClientShowcase() {
   // Client data organized by industry with icons
   const clientCategories = [
     {
-      category: "Agriculture & Manufacturing",
-      icon: <Tractor className="h-6 w-6 text-blue-500" />,
-      clients: ["Eicher Tractors", "Ambika Overseas", "Everest Tools"],
-      bgColor: "bg-blue-50",
-    },
-    {
-      category: "Automotive",
-      icon: <Car className="h-6 w-6 text-indigo-500" />,
-      clients: ["Royal Enfield"],
-      bgColor: "bg-indigo-50",
-    },
-    {
       category: "Food & Beverage",
       icon: <Pizza className="h-6 w-6 text-amber-500" />,
       clients: [
         "Domino's Pizza",
+        "Chick Chick",
         "Didar Restaurant (Montreal)",
         "Namaste India (Austria)",
         "La Cantina (Germany)",
@@ -37,7 +27,6 @@ export default function ClientShowcase() {
         "Kanta Chhuri",
         "Vanakkam",
         "Grill Affairs",
-        "Chick Chick",
       ],
       bgColor: "bg-amber-50",
     },
@@ -53,10 +42,10 @@ export default function ClientShowcase() {
       bgColor: "bg-emerald-50",
     },
     {
-      category: "Religious Organizations",
-      icon: <Church className="h-6 w-6 text-purple-500" />,
-      clients: ["Ek Niwas Darbar (UK & India)"],
-      bgColor: "bg-purple-50",
+      category: "Manufacturing & Automotive",
+      icon: <Factory className="h-6 w-6 text-indigo-500" />,
+      clients: ["Ambika Overseas", "Everest Tools", "Royal Enfield"],
+      bgColor: "bg-indigo-50",
     },
     {
       category: "Healthcare",
@@ -64,10 +53,22 @@ export default function ClientShowcase() {
       clients: ["Johal Hospital (Jalandhar)", "Life Space Labs (USA)"],
       bgColor: "bg-rose-50",
     },
+    {
+      category: "Agriculture",
+      icon: <Tractor className="h-6 w-6 text-green-500" />,
+      clients: ["Eicher Tractors"],
+      bgColor: "bg-green-50",
+    },
+    {
+      category: "Religious Organizations",
+      icon: <Church className="h-6 w-6 text-purple-500" />,
+      clients: ["Ek Niwas Darbar (UK & India)"],
+      bgColor: "bg-purple-50",
+    },
   ];
 
   return (
-    <div className="py-24 bg-gradient-to-b from-gray-50 to-white">
+    <div className="py-24 bg-white">
       <div className="container mx-auto px-4">
         <div className="max-w-3xl mx-auto text-center mb-16">
           <h2 className="text-4xl font-bold mb-6 relative inline-block">
@@ -86,7 +87,7 @@ export default function ClientShowcase() {
           {clientCategories.map((category) => (
             <div
               key={category.category}
-              className="bg-white rounded-xl shadow-md hover:shadow-lg transition-all duration-300 overflow-hidden border border-gray-100 transform hover:-translate-y-1"
+              className="bg-white rounded-xl shadow-md hover:shadow-xl transition-all duration-300 overflow-hidden border border-gray-100 transform hover:-translate-y-2 hover:scale-105"
             >
               <div className={`p-5 ${category.bgColor}`}>
                 <div className="flex items-center">
@@ -102,7 +103,7 @@ export default function ClientShowcase() {
               <ul className="p-5 space-y-3">
                 {category.clients.map((client) => (
                   <li key={client} className="text-gray-600 flex items-start">
-                    <span className="w-2 h-2 bg-blue-500 rounded-full mr-3 mt-2 flex-shrink-0"></span>
+                    <span className="w-2 h-2 bg-blue-500 rounded-full mr-3 mt-2 flex-shrink-0 animate-pulse-slow"></span>
                     <span>{client}</span>
                   </li>
                 ))}
