@@ -3,13 +3,17 @@ import { Button } from "@/components/ui/button";
 
 export default function Hero() {
   return (
-    <div className="relative bg-gradient-to-r from-gray-800 to-gray-900 text-white pt-24">
+    <div className="relative bg-gradient-to-r from-gray-800 to-gray-900 text-white">
       <div className="container mx-auto px-4 py-16 md:py-24">
         <div className="grid md:grid-cols-2 gap-8 items-center">
           <div className="order-2 md:order-1">
-            <h1 className="text-4xl md:text-5xl font-bold mb-4">Professional Printing Services</h1>
-            <p className="text-lg mb-8 text-gray-200">
-              From digital printing to large format displays, we bring your ideas to life with precision and quality.
+            <h1 className="text-4xl md:text-5xl font-bold mb-6 leading-tight">
+              Professional Printing & Design Services
+            </h1>
+            <p className="text-lg mb-8 text-gray-200 max-w-lg">
+              From digital printing to large format displays, we bring your
+              ideas to life with precision and quality. Serving clients
+              worldwide with excellence in printing and design.
             </p>
             <div className="flex flex-col sm:flex-row gap-4">
               <Link href="/services">
@@ -32,9 +36,9 @@ export default function Hero() {
             </div>
           </div>
           <div className="order-1 md:order-2">
-            <img 
-              src="https://images.unsplash.com/photo-1588666309990-d68f08e3d4a6?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&h=600&q=80" 
-              alt="Digital printing machine" 
+            <img
+              src="https://images.unsplash.com/photo-1588666309990-d68f08e3d4a6?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&h=600&q=80"
+              alt="Digital printing machine"
               className="rounded-lg shadow-xl max-h-96 w-full object-cover"
             />
           </div>
