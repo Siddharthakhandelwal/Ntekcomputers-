@@ -24,7 +24,7 @@ export default function Hero() {
               </span>
             </div>
             <h1 className="text-4xl md:text-5xl font-bold mb-6 leading-tight text-gray-900">
-              Professional Printing & Design Services
+              Professional Design & Printing Services
               <span className="block mt-2 h-1 w-24 bg-blue-500 rounded-full"></span>
             </h1>
             <p className="text-lg mb-8 text-gray-600 max-w-lg">

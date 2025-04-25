@@ -61,8 +61,8 @@ export default function Footer() {
               <span>N Tek Computers</span>
             </h3>
             <p className="text-gray-600 mb-4">
-              Professional printing services for all your business and personal
-              needs.
+              Professional Designing & Printing services for all your business
+              and personal needs.
             </p>
             <div className="flex space-x-4">
               <a
