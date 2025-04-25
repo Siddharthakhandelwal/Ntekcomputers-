@@ -12,116 +12,103 @@ import {
 
 export default function ClientShowcase() {
   // Client data organized by industry with icons
-  const clientsByIndustry = [
+  const clientCategories = [
     {
-      industry: "Agriculture & Manufacturing",
-      clients: [
-        {
-          name: "Eicher Tractors",
-          icon: <Tractor className="h-8 w-8 text-blue-500" />,
-        },
-        {
-          name: "Ambika Overseas",
-          icon: <Building className="h-8 w-8 text-blue-500" />,
-        },
-        {
-          name: "Everest Tools",
-          icon: <Hammer className="h-8 w-8 text-blue-500" />,
-        },
-      ],
+      category: "Agriculture & Manufacturing",
+      icon: <Tractor className="h-6 w-6 text-blue-500" />,
+      clients: ["Eicher Tractors", "Ambika Overseas", "Everest Tools"],
+      bgColor: "bg-blue-50",
     },
     {
-      industry: "Automotive",
-      clients: [
-        {
-          name: "Royal Enfield",
-          icon: <Car className="h-8 w-8 text-blue-500" />,
-        },
-      ],
+      category: "Automotive",
+      icon: <Car className="h-6 w-6 text-indigo-500" />,
+      clients: ["Royal Enfield"],
+      bgColor: "bg-indigo-50",
     },
     {
-      industry: "Food & Beverage",
+      category: "Food & Beverage",
+      icon: <Pizza className="h-6 w-6 text-amber-500" />,
       clients: [
-        {
-          name: "Domino's Pizza",
-          icon: <Pizza className="h-8 w-8 text-blue-500" />,
-        },
-        {
-          name: "Didar Restaurant",
-          icon: <Store className="h-8 w-8 text-blue-500" />,
-        },
-        {
-          name: "Namaste India",
-          icon: <Store className="h-8 w-8 text-blue-500" />,
-        },
+        "Domino's Pizza",
+        "Didar Restaurant (Montreal)",
+        "Namaste India (Austria)",
+        "La Cantina (Germany)",
+        "Naan N Oven (USA)",
+        "Kanta Chhuri",
+        "Vanakkam",
+        "Grill Affairs",
+        "Chick Chick",
       ],
+      bgColor: "bg-amber-50",
     },
     {
-      industry: "Education",
+      category: "Education",
+      icon: <School className="h-6 w-6 text-emerald-500" />,
       clients: [
-        {
-          name: "Army Schools",
-          icon: <School className="h-8 w-8 text-blue-500" />,
-        },
-        {
-          name: "Delhi Public School",
-          icon: <School className="h-8 w-8 text-blue-500" />,
-        },
-        {
-          name: "Pine Grove School",
-          icon: <School className="h-8 w-8 text-blue-500" />,
-        },
+        "Army Schools",
+        "Delhi Public School",
+        "Pine Grove School",
+        "Glory International School",
       ],
+      bgColor: "bg-emerald-50",
     },
     {
-      industry: "Religious Organizations",
-      clients: [
-        {
-          name: "Ek Niwas Darbar",
-          icon: <Church className="h-8 w-8 text-blue-500" />,
-        },
-      ],
+      category: "Religious Organizations",
+      icon: <Church className="h-6 w-6 text-purple-500" />,
+      clients: ["Ek Niwas Darbar (UK & India)"],
+      bgColor: "bg-purple-50",
     },
     {
-      industry: "Healthcare",
-      clients: [
-        {
-          name: "Johal Hospital",
-          icon: <Hospital className="h-8 w-8 text-blue-500" />,
-        },
-        {
-          name: "Life Space Labs",
-          icon: <Hospital className="h-8 w-8 text-blue-500" />,
-        },
-      ],
+      category: "Healthcare",
+      icon: <Hospital className="h-6 w-6 text-rose-500" />,
+      clients: ["Johal Hospital (Jalandhar)", "Life Space Labs (USA)"],
+      bgColor: "bg-rose-50",
     },
   ];
 
   return (
-    <div className="py-16 bg-gray-50">
+    <div className="py-24 bg-gradient-to-b from-gray-50 to-white">
       <div className="container mx-auto px-4">
-        <h2 className="text-3xl font-bold text-center mb-12">
-          Our Esteemed Clients
-        </h2>
-        <div className="grid grid-cols-2 md:grid-cols-4 gap-6">
-          {clientsByIndustry.flatMap((category) =>
-            category.clients.map((client, index) => (
-              <div
-                key={`${category.industry}-${index}`}
-                className="bg-white p-6 rounded-lg shadow-sm hover:shadow-md transition-shadow flex flex-col items-center"
-              >
-                <div className="w-16 h-16 bg-gray-100 rounded-full flex items-center justify-center mb-4">
-                  {client.icon}
+        <div className="max-w-3xl mx-auto text-center mb-16">
+          <h2 className="text-4xl font-bold mb-6 relative inline-block">
+            Our Esteemed Clients
+            <span className="absolute bottom-0 left-1/2 transform -translate-x-1/2 w-24 h-1 bg-blue-500 rounded-full"></span>
+          </h2>
+
+          <p className="text-gray-600 text-lg mt-8">
+            We take pride in serving a wide range of industries and providing
+            top-notch printing services to some of the most well-known names
+            globally. Here are just a few of our valued clients:
+          </p>
+        </div>
+
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+          {clientCategories.map((category) => (
+            <div
+              key={category.category}
+              className="bg-white rounded-xl shadow-md hover:shadow-lg transition-all duration-300 overflow-hidden border border-gray-100 transform hover:-translate-y-1"
+            >
+              <div className={`p-5 ${category.bgColor}`}>
+                <div className="flex items-center">
+                  <div className="w-12 h-12 bg-white rounded-full flex items-center justify-center mr-4 shadow-sm">
+                    {category.icon}
+                  </div>
+                  <h3 className="text-xl font-semibold text-gray-800">
+                    {category.category}
+                  </h3>
                 </div>
-                <h3 className="text-md font-medium text-center">
-                  {client.name}
-                </h3>
-                <p className="text-xs text-gray-500 text-center">
-                  {category.industry}
-                </p>
               </div>
-            ))
-          )}
+
+              <ul className="p-5 space-y-3">
+                {category.clients.map((client) => (
+                  <li key={client} className="text-gray-600 flex items-start">
+                    <span className="w-2 h-2 bg-blue-500 rounded-full mr-3 mt-2 flex-shrink-0"></span>
+                    <span>{client}</span>
+                  </li>
+                ))}
+              </ul>
+            </div>
+          ))}
         </div>
       </div>
     </div>

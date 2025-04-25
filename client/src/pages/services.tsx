@@ -75,14 +75,19 @@ export default function Services() {
         <h1 className="text-center text-3xl font-bold mb-4 font-sans">
           Our Services
         </h1>
-        <p className="text-center text-gray-600 mb-12 max-w-2xl mx-auto">
-          <strong>Comprehensive Printing Services</strong> – We offer a wide
-          range of printing solutions for both business and personal needs,
-          including brochures, business cards, custom apparel, banners, and
-          more. <strong>Global Reach, Multilingual Support</strong> – We serve
-          clients worldwide with printing services in English, Hindi, Urdu,
-          Chinese, German, and more, ensuring quality and cultural relevance.
-        </p>
+        <div className="text-center text-gray-600 mb-12 max-w-2xl mx-auto">
+          <p className="mb-4">
+            <strong>Comprehensive Printing Services</strong> – We offer a wide
+            range of printing solutions for both business and personal needs,
+            including brochures, business cards, custom apparel, banners, and
+            more.
+          </p>
+          <p>
+            <strong>Global Reach, Multilingual Support</strong> – We serve
+            clients worldwide with printing services in English, Hindi, Urdu,
+            Chinese, German, and more, ensuring quality and cultural relevance.
+          </p>
+        </div>
 
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
           {services.map((service) => (
