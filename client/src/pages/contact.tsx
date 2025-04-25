@@ -12,7 +12,6 @@ export default function Contact() {
   return (
     <section className="pt-24">
       <div className="container mx-auto px-4 py-16">
-        
         <h1 className="text-3xl font-bold mb-4 text-center">Contact Us</h1>
         <p className="text-center text-gray-600 mb-12 max-w-2xl mx-auto">
           Have questions or ready to start your next designing and printing
