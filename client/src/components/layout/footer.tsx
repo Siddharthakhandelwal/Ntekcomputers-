@@ -46,12 +46,12 @@ export default function Footer() {
       </div>
 
       {/* CMYK color strip at top */}
-      <div className="flex h-2 w-full">
+      {/* <div className="flex h-2 w-full">
         <div className="w-1/4 bg-cyan-500"></div>
         <div className="w-1/4 bg-magenta-500"></div>
         <div className="w-1/4 bg-yellow-400"></div>
         <div className="w-1/4 bg-blue-600"></div>
-      </div>
+      </div> */}
 
       <div className="container mx-auto px-4 py-12 relative z-10">
         <div className="grid md:grid-cols-4 gap-8">

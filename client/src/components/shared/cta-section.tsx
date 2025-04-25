@@ -63,7 +63,7 @@ export default function CTASection() {
         <div className="w-1/4 bg-cyan-500"></div>
         <div className="w-1/4 bg-magenta-500"></div>
         <div className="w-1/4 bg-yellow-400"></div>
-        <div className="w-1/4 bg-blue-600"></div>
+        <div className="h-2 w-1/4 bg-black"></div>
       </div>
     </section>
   );

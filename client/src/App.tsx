@@ -39,7 +39,13 @@ function App() {
       <TooltipProvider>
         <div className="flex flex-col min-h-screen">
           <Navbar />
-          <main className="flex-grow pt-16">
+          <div className="flex w-full fixed top-16 z-40">
+            <div className="h-1.5 w-1/4 bg-cyan-500"></div>
+            <div className="h-1.5 w-1/4 bg-magenta-500"></div>
+            <div className="h-1.5 w-1/4 bg-yellow-400"></div>
+            <div className="h-1.5 w-1/4 bg-black"></div>
+          </div>
+          <main className="flex-grow pt-[4.25rem]">
             <Router />
           </main>
           <Footer />
