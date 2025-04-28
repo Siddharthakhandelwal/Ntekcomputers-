@@ -9,7 +9,7 @@ const services = [
     id: 1,
     title: "Digital Printing",
     description:
-      "High-quality digital printing for all your business needs. Perfect for brochures, flyers, business cards and more.",
+      "High-quality digital printing for all your business needs. Perfect for die cutting stickers, brochures, flyers, business cards and more.",
     image: "/images/Digital printing.jpg",
   },
   {
@@ -35,9 +35,9 @@ const services = [
   },
   {
     id: 5,
-    title: "Custom Packaging",
+    title: "Customized Gifts",
     description:
-      "Stand out with custom printed packaging solutions for your products, including boxes, bags, labels and wraps.",
+      "Transform your gifting experience with personalized gifts such as trophies, keychains, t-shirts, photo frames, and more. Perfect for any occasion, our customized gifts make every moment memorable.",
     image: "/images/custom packaging.jpg",
   },
   {

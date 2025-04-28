@@ -20,19 +20,19 @@ const features = [
   },
   {
     id: 3,
-    icon: <Users className="h-8 w-8 text-amber-500" />,
+    icon: <Users className="h-8 w-8 text-yellow-500" />,
     title: "Personalized Service",
     description:
       "We work closely with you to understand your needs and provide custom printing solutions.",
-    color: "amber",
+    color: "yellow",
   },
   {
     id: 4,
-    icon: <Lightbulb className="h-8 w-8 text-emerald-500" />,
+    icon: <Lightbulb className="h-8 w-8 text-green-500" />,
     title: "Creative Design",
     description:
       "Our design experts bring creativity and innovation to every project, ensuring your materials stand out.",
-    color: "emerald",
+    color: "green",
   },
   {
     id: 5,
@@ -113,6 +113,14 @@ export default function Features() {
               </div>
             </div>
           ))}
+        </div>
+
+        {/* CMYK color strip at bottom */}
+        <div className="flex h-2 w-full mt-8">
+          <div className="w-1/4 bg-cyan-500"></div>
+          <div className="w-1/4 bg-magenta-500"></div>
+          <div className="w-1/4 bg-yellow-400"></div>
+          <div className="w-1/4 bg-black"></div>
         </div>
       </div>
     </div>

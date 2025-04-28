@@ -4,11 +4,24 @@ import { z } from "zod";
 import { zodResolver } from "@hookform/resolvers/zod";
 import { apiRequest } from "@/lib/queryClient";
 import { useToast } from "@/hooks/use-toast";
-import { Form, FormControl, FormField, FormItem, FormLabel, FormMessage } from "@/components/ui/form";
+import {
+  Form,
+  FormControl,
+  FormField,
+  FormItem,
+  FormLabel,
+  FormMessage,
+} from "@/components/ui/form";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
 import { Button } from "@/components/ui/button";
-import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select";
+import {
+  Select,
+  SelectContent,
+  SelectItem,
+  SelectTrigger,
+  SelectValue,
+} from "@/components/ui/select";
 
 // Form validation schema
 const contactFormSchema = z.object({
@@ -24,7 +37,7 @@ type ContactFormValues = z.infer<typeof contactFormSchema>;
 export default function ContactForm() {
   const { toast } = useToast();
   const [isSubmitting, setIsSubmitting] = useState(false);
-  
+
   // Initialize form
   const form = useForm<ContactFormValues>({
     resolver: zodResolver(contactFormSchema),
@@ -40,23 +53,25 @@ export default function ContactForm() {
   // Submit handler
   const onSubmit = async (data: ContactFormValues) => {
     setIsSubmitting(true);
-    
+
     try {
       await apiRequest("POST", "/api/contact", data);
-      
+
       toast({
         title: "Message Sent",
-        description: "Thank you for your message! We will get back to you soon.",
+        description:
+          "Thank you for your message! We will get back to you soon.",
       });
-      
+
       // Reset form
       form.reset();
     } catch (error) {
       console.error("Error submitting form:", error);
-      
+
       toast({
         title: "Error",
-        description: "There was an error sending your message. Please try again.",
+        description:
+          "There was an error sending your message. Please try again.",
         variant: "destructive",
       });
     } finally {
@@ -80,7 +95,7 @@ export default function ContactForm() {
             </FormItem>
           )}
         />
-        
+
         <FormField
           control={form.control}
           name="email"
@@ -88,13 +103,17 @@ export default function ContactForm() {
             <FormItem>
               <FormLabel>Email Address</FormLabel>
               <FormControl>
-                <Input placeholder="youremail@example.com" type="email" {...field} />
+                <Input
+                  placeholder="youremail@example.com"
+                  type="email"
+                  {...field}
+                />
               </FormControl>
               <FormMessage />
             </FormItem>
           )}
         />
-        
+
         <FormField
           control={form.control}
           name="phone"
@@ -108,7 +127,7 @@ export default function ContactForm() {
             </FormItem>
           )}
         />
-        
+
         <FormField
           control={form.control}
           name="service"
@@ -122,12 +141,24 @@ export default function ContactForm() {
                   </SelectTrigger>
                 </FormControl>
                 <SelectContent>
-                  <SelectItem value="digital-printing">Digital Printing</SelectItem>
-                  <SelectItem value="large-format">Large Format Printing</SelectItem>
-                  <SelectItem value="business-stationery">Business Stationery</SelectItem>
-                  <SelectItem value="marketing-materials">Marketing Materials</SelectItem>
-                  <SelectItem value="custom-packaging">Custom Packaging</SelectItem>
-                  <SelectItem value="design-services">Design Services</SelectItem>
+                  <SelectItem value="digital-printing">
+                    Digital Printing
+                  </SelectItem>
+                  <SelectItem value="large-format">
+                    Large Format Printing
+                  </SelectItem>
+                  <SelectItem value="business-stationery">
+                    Business Stationery
+                  </SelectItem>
+                  <SelectItem value="marketing-materials">
+                    Marketing Materials
+                  </SelectItem>
+                  <SelectItem value="customized-gifts">
+                    Customized Gifts
+                  </SelectItem>
+                  <SelectItem value="design-services">
+                    Design Services
+                  </SelectItem>
                   <SelectItem value="other">Other</SelectItem>
                 </SelectContent>
               </Select>
@@ -135,7 +166,7 @@ export default function ContactForm() {
             </FormItem>
           )}
         />
-        
+
         <FormField
           control={form.control}
           name="message"
@@ -143,19 +174,19 @@ export default function ContactForm() {
             <FormItem>
               <FormLabel>Your Message</FormLabel>
               <FormControl>
-                <Textarea 
-                  placeholder="Tell us about your project..." 
-                  className="min-h-[120px]" 
-                  {...field} 
+                <Textarea
+                  placeholder="Tell us about your project..."
+                  className="min-h-[120px]"
+                  {...field}
                 />
               </FormControl>
               <FormMessage />
             </FormItem>
           )}
         />
-        
-        <Button 
-          type="submit" 
+
+        <Button
+          type="submit"
           className="w-full bg-blue-500 hover:bg-blue-600"
           disabled={isSubmitting}
         >

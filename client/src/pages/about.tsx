@@ -53,26 +53,30 @@ export default function About() {
               About N-Tek Computers
             </h1>
             <p className="text-gray-600 mb-4">
-              At N-Tek Computers, we combine cutting-edge technology with
+              At N Tek Computers, we combine cutting-edge technology with
               exceptional craftsmanship to deliver printing solutions that
-              exceed expectations. Our journey began with a simple mission: to
-              provide high-quality printing services that help businesses and
-              individuals communicate their message effectively.
+              exceed expectations. Our journey began in the 1960s, starting as a
+              small business offering manual printing services. As the industry
+              evolved, so did we—embracing the digital era and launching our
+              digital design and printing services in 2000.
             </p>
-
             <p className="text-gray-600 mb-4">
-              With years of experience in the printing industry, our team of
-              skilled professionals is dedicated to bringing your vision to
-              life. We understand that each project is unique, which is why we
-              offer personalized service and attention to detail from start to
-              finish.
+              With over 65 years of experience, our mission has always been
+              simple: to provide high-quality printing services that help
+              businesses and individuals communicate their message effectively.
             </p>
-
+            <p className="text-gray-600 mb-4">
+              Our team of skilled professionals is dedicated to bringing your
+              vision to life. We understand that each project is unique, which
+              is why we offer personalized service and attention to detail from
+              start to finish.
+            </p>
             <p className="text-gray-600 mb-6">
-              Located in Jalandhar, Punjab, we serve clients throughout the
-              region with prompt, reliable, and professional printing services.
-              Whether you need business cards, banners, brochures, or custom
-              packaging, we have the expertise and equipment to deliver
+              Located in Jalandhar, Punjab, we serve clients in multilingual
+              languages throughout the world with prompt, reliable, and
+              professional design and printing services. Whether you need die
+              cutting stickers, restaurant menu, catalogs, price list, and more
+              printing solutions, we have the expertise and equipment to deliver
               outstanding results.
             </p>
 
@@ -99,7 +103,7 @@ export default function About() {
               <img
                 src="https://images.unsplash.com/photo-1554774853-aae0a22c8aa4?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&h=600&q=80"
                 alt="Printing shop interior"
-                className="rounded-lg shadow-xl relative z-10"
+                className="rounded-lg shadow-xl relative z-10 object-cover w-full h-80 md:h-96"
               />
             </div>
           </div>

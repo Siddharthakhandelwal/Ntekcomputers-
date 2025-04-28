@@ -192,7 +192,7 @@ export default function Footer() {
                   <a className="text-gray-600 hover:text-magenta-500 transition-colors flex items-center group">
                     <span className="w-1.5 h-1.5 bg-magenta-500 rounded-full mr-2 group-hover:animate-pulse"></span>
                     <span className="group-hover:translate-x-1 transition-transform">
-                      Custom Packaging
+                      Customized Gifts
                     </span>
                   </a>
                 </Link>
