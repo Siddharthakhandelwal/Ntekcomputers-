@@ -66,13 +66,17 @@ export default function ContactInfo() {
         </CardContent>
       </Card>
 
-      <div className="rounded-lg overflow-hidden shadow-md h-80">
+      <div className="rounded-lg overflow-hidden shadow-md h-[500px] mb-4">
+        {/* <h4 className="text-lg font-semibold mb-4">
+          Find Us Here: N-Tek Computers, 35 B Adarsh Nagar, Jalandhar, Punjab
+          144002
+        </h4> */}
         <iframe
-          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3407.6732374487326!2d75.5745!3d31.3268!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x391a5a5747a9eb91%3A0xc74b34c05aa5b4b8!2sAdarsh%20Nagar%2C%20Jalandhar%2C%20Punjab%20144002!5e0!3m2!1sen!2sin!4v1656927234455!5m2!1sen!2sin"
+          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d307.0969668269897!2d75.56103443510071!3d31.32726783369345!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x391a5aed6b3e2501%3A0xa4531be00ba5451e!2sN-Tek%20Computers!5e0!3m2!1sen!2sin!4v1745863369761!5m2!1sen!2sin"
           width="100%"
-          height="100%"
-          style={{ border: 0 }}
-          allowFullScreen
+          height="500"
+          style={{ border: "0" }}
+          allowFullScreen={true}
           loading="lazy"
           referrerPolicy="no-referrer-when-downgrade"
         ></iframe>
