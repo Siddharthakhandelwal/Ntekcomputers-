@@ -5,7 +5,7 @@ import CTASection from "@/components/shared/cta-section";
 export default function About() {
   // Set document title on mount
   useEffect(() => {
-    document.title = "About Us - N Tek Computers";
+    document.title = "About Us - N-Tek Computers";
   }, []);
 
   return (
@@ -50,11 +50,10 @@ export default function About() {
         <div className="grid md:grid-cols-2 gap-12 items-center">
           <div>
             <h1 className="text-3xl font-bold mb-6 relative inline-block">
-              About N Tek Computers
-              <span className="absolute bottom-0 left-0 w-24 h-1 bg-blue-500 rounded-full"></span>
+              About N-Tek Computers
             </h1>
             <p className="text-gray-600 mb-4">
-              At N Tek Computers, we combine cutting-edge technology with
+              At N-Tek Computers, we combine cutting-edge technology with
               exceptional craftsmanship to deliver printing solutions that
               exceed expectations. Our journey began with a simple mission: to
               provide high-quality printing services that help businesses and

@@ -8,7 +8,7 @@ const testimonials = [
   {
     id: 1,
     content:
-      "N Tek Computers delivered my business cards and brochures with exceptional quality. Their attention to detail and customer service is outstanding.",
+      "N-Tek Computers delivered my business cards and brochures with exceptional quality. Their attention to detail and customer service is outstanding.",
     author: "Rajiv Sharma",
     role: "Local Business Owner",
     rating: 5,
@@ -16,7 +16,7 @@ const testimonials = [
   {
     id: 2,
     content:
-      "The team at N Tek Computers helped us with our event banners on a tight deadline. The results were impressive and the service was professional from start to finish.",
+      "The team at N-Tek Computers helped us with our event banners on a tight deadline. The results were impressive and the service was professional from start to finish.",
     author: "Priya Patel",
     role: "Event Coordinator",
     rating: 5,
@@ -24,7 +24,7 @@ const testimonials = [
   {
     id: 3,
     content:
-      "I've been using N Tek Computers for all my corporate printing needs for over 2 years now. Their consistent quality and reliability keep me coming back.",
+      "I've been using N-Tek Computers for all my corporate printing needs for over 2 years now. Their consistent quality and reliability keep me coming back.",
     author: "Amit Singh",
     role: "Marketing Manager",
     rating: 4.5,
@@ -94,11 +94,10 @@ export default function Testimonials() {
         <div className="max-w-3xl mx-auto text-center mb-12">
           <h2 className="text-3xl font-bold mb-6 relative inline-block">
             What Our Clients Say
-            <span className="absolute bottom-0 left-1/2 transform -translate-x-1/2 w-24 h-1 bg-blue-500 rounded-full"></span>
           </h2>
           <p className="text-gray-600 mt-4">
             Hear from our satisfied clients about their experience working with
-            N Tek Computers
+            N-Tek Computers
           </p>
         </div>
 

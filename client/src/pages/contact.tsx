@@ -6,7 +6,7 @@ import CTASection from "@/components/shared/cta-section";
 export default function Contact() {
   // Set document title on mount
   useEffect(() => {
-    document.title = "Contact Us - N Tek Computers";
+    document.title = "Contact Us - N-Tek Computers";
   }, []);
 
   return (

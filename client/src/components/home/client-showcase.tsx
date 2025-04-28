@@ -42,9 +42,9 @@ export default function ClientShowcase() {
       bgColor: "bg-emerald-50",
     },
     {
-      category: "Manufacturing & Automotive",
+      category: "Automotive",
       icon: <Factory className="h-6 w-6 text-indigo-500" />,
-      clients: ["Ambika Overseas", "Everest Tools", "Royal Enfield"],
+      clients: ["Royal Enfield", "Eicher Tractor", "TAFE Motors"],
       bgColor: "bg-indigo-50",
     },
     {
@@ -52,12 +52,6 @@ export default function ClientShowcase() {
       icon: <Hospital className="h-6 w-6 text-rose-500" />,
       clients: ["Johal Hospital (Jalandhar)", "Life Space Labs (USA)"],
       bgColor: "bg-rose-50",
-    },
-    {
-      category: "Agriculture",
-      icon: <Tractor className="h-6 w-6 text-green-500" />,
-      clients: ["Eicher Tractors"],
-      bgColor: "bg-green-50",
     },
     {
       category: "Religious Organizations",
@@ -73,7 +67,6 @@ export default function ClientShowcase() {
         <div className="max-w-3xl mx-auto text-center mb-16">
           <h2 className="text-4xl font-bold mb-6 relative inline-block">
             Our Esteemed Clients
-            <span className="absolute bottom-0 left-1/2 transform -translate-x-1/2 w-24 h-1 bg-blue-500 rounded-full"></span>
           </h2>
 
           <p className="text-gray-600 text-lg mt-8">

@@ -39,7 +39,7 @@ const features = [
     icon: <Globe className="h-8 w-8 text-purple-500" />,
     title: "Global Reach",
     description:
-      "We serve clients worldwide with multilingual support in English, Hindi, Urdu, Chinese, German, and more.",
+      "We serve clients worldwide with multilingual support in English, Hindi, Punjabi, French, Chinese, German, and more.",
     color: "purple",
   },
 ];
@@ -83,10 +83,9 @@ export default function Features() {
         <div className="text-center max-w-3xl mx-auto mb-16">
           <h2 className="text-4xl font-bold mb-6 relative inline-block">
             Why Choose Us?
-            <span className="absolute bottom-0 left-1/2 transform -translate-x-1/2 w-24 h-1 bg-blue-500 rounded-full"></span>
           </h2>
           <p className="text-lg text-gray-600 mt-6">
-            At N Tek Computers, we combine cutting-edge printing technology with
+            At N-Tek Computers, we combine cutting-edge printing technology with
             exceptional service to deliver results that exceed your
             expectations.
           </p>

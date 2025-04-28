@@ -25,7 +25,6 @@ export default function Hero() {
             </div>
             <h1 className="text-4xl md:text-5xl font-bold mb-6 leading-tight text-gray-900">
               Professional Design & Printing Services
-              <span className="block mt-2 h-1 w-24 bg-blue-500 rounded-full"></span>
             </h1>
             <p className="text-lg mb-8 text-gray-600 max-w-lg">
               From digital printing to large format displays, we bring your
@@ -58,7 +57,7 @@ export default function Hero() {
             <div className="absolute -top-4 -left-4 w-20 h-20 bg-blue-400 rounded-lg opacity-50 -z-10 animate-pulse-slow"></div>
             <div className="absolute -bottom-4 -right-4 w-20 h-20 bg-amber-400 rounded-lg opacity-50 -z-10 animate-pulse-slow"></div>
             <img
-              src="https://images.unsplash.com/photo-1588666309990-d68f08e3d4a6?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&h=600&q=80"
+              src="/images/home page.jpg"
               alt="Digital printing machine"
               className="rounded-lg shadow-xl max-h-96 w-full object-cover z-10 border border-gray-200"
             />

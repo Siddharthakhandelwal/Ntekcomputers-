@@ -50,7 +50,7 @@ export default function Navbar() {
           <Link href="/">
             <a className="flex items-center">
               <span className="text-2xl font-bold text-gray-800">
-                N<span className="text-blue-500"> Tek</span> Computers
+                N-<span className="text-blue-500">Tek</span> Computers
               </span>
             </a>
           </Link>

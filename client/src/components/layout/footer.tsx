@@ -58,7 +58,7 @@ export default function Footer() {
           <div>
             <h3 className="text-xl font-bold mb-4 flex items-center">
               <Printer className="h-5 w-5 mr-2 text-blue-600" />
-              <span>N Tek Computers</span>
+              <span>N-Tek Computers</span>
             </h3>
             <p className="text-gray-600 mb-4">
               Professional Designing & Printing services for all your business
@@ -240,7 +240,7 @@ export default function Footer() {
 
         <div className="mt-12 pt-8 text-center">
           <p className="text-gray-500">
-            &copy; {new Date().getFullYear()} N Tek Computers. All rights
+            &copy; {new Date().getFullYear()} N-Tek Computers. All rights
             reserved.
           </p>
         </div>

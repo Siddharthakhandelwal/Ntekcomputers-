@@ -9,7 +9,7 @@ export default function Home() {
   // Set document title on mount
   useEffect(() => {
     document.title =
-      "N Tek Computers - Professional Printing & Design Services";
+      "N-Tek Computers - Professional Printing & Design Services";
   }, []);
 
   return (
