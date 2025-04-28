@@ -28,6 +28,7 @@ export default function ContactInfo() {
               <div>
                 <h4 className="font-medium">Phone</h4>
                 <p className="text-gray-600">+91-9818156734</p>
+                <p className="text-gray-600">+91-9814472234</p>
               </div>
             </div>
 
