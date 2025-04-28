@@ -64,14 +64,6 @@ export default function Hero() {
           </div>
         </div>
       </div>
-
-      {/* CMYK color strip at bottom */}
-      <div className="flex h-2 w-full mt-8">
-        <div className="w-1/4 bg-cyan-500"></div>
-        <div className="w-1/4 bg-magenta-500"></div>
-        <div className="w-1/4 bg-yellow-400"></div>
-        <div className="w-1/4 bg-black"></div>
-      </div>
     </div>
   );
 }

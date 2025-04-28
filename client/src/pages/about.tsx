@@ -53,7 +53,7 @@ export default function About() {
               About N-Tek Computers
             </h1>
             <p className="text-gray-600 mb-4">
-              At N Tek Computers, we combine cutting-edge technology with
+              At N-Tek Computers, we combine cutting-edge technology with
               exceptional craftsmanship to deliver printing solutions that
               exceed expectations. Our journey began in the 1960s, starting as a
               small business offering manual printing services. As the industry

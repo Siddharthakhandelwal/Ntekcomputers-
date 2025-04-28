@@ -34,13 +34,6 @@ const services = [
     image: "/images/Marketing Materials.jpg",
   },
   {
-    id: 5,
-    title: "Customized Gifts",
-    description:
-      "Transform your gifting experience with personalized gifts such as trophies, keychains, t-shirts, photo frames, and more. Perfect for any occasion, our customized gifts make every moment memorable.",
-    image: "/images/custom packaging.jpg",
-  },
-  {
     id: 6,
     title: "Design Services",
     description:
@@ -53,6 +46,13 @@ const services = [
     description:
       "Comprehensive branding solutions including logo design, brand identity, corporate stationery, and brand guidelines to establish a strong market presence.",
     image: "/images/branding.jpg",
+  },
+  {
+    id: 5,
+    title: "Customized Gifts",
+    description:
+      "Transform your gifting experience with personalized gifts such as trophies, keychains, t-shirts, photo frames, and more. Perfect for any occasion, our customized gifts make every moment memorable.",
+    image: "/images/custom packaging.jpg",
   },
 ];
 
@@ -88,12 +88,12 @@ export default function Services() {
       </div>
 
       {/* CMYK color strip at top */}
-      <div className="flex h-2 w-full absolute top-0">
+      {/* <div className="flex h-2 w-full absolute top-0">
         <div className="w-1/4 bg-cyan-500"></div>
         <div className="w-1/4 bg-magenta-500"></div>
         <div className="w-1/4 bg-yellow-400"></div>
         <div className="h-2 w-1/4 bg-black"></div>
-      </div>
+      </div> */}
 
       <div className="container mx-auto px-4 py-16 relative z-10">
         <h1 className="text-center text-4xl font-bold mb-6 relative inline-block mx-auto flex justify-center w-full">

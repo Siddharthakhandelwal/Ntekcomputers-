@@ -45,14 +45,6 @@ export default function Footer() {
         </div>
       </div>
 
-      {/* CMYK color strip at top */}
-      {/* <div className="flex h-2 w-full">
-        <div className="w-1/4 bg-cyan-500"></div>
-        <div className="w-1/4 bg-magenta-500"></div>
-        <div className="w-1/4 bg-yellow-400"></div>
-        <div className="w-1/4 bg-blue-600"></div>
-      </div> */}
-
       <div className="container mx-auto px-4 py-12 relative z-10">
         <div className="grid md:grid-cols-4 gap-8">
           <div>
@@ -71,12 +63,12 @@ export default function Footer() {
               >
                 <Facebook className="h-5 w-5" />
               </a>
-              <a
+              {/* <a
                 href="#"
                 className="text-gray-400 hover:text-blue-600 transition-colors transform hover:scale-110"
               >
                 <Twitter className="h-5 w-5" />
-              </a>
+              </a> */}
               <a
                 href="#"
                 className="text-gray-400 hover:text-blue-600 transition-colors transform hover:scale-110"
@@ -192,7 +184,7 @@ export default function Footer() {
                   <a className="text-gray-600 hover:text-magenta-500 transition-colors flex items-center group">
                     <span className="w-1.5 h-1.5 bg-magenta-500 rounded-full mr-2 group-hover:animate-pulse"></span>
                     <span className="group-hover:translate-x-1 transition-transform">
-                      Customized Gifts
+                      Design Services
                     </span>
                   </a>
                 </Link>
@@ -203,6 +195,16 @@ export default function Footer() {
                     <span className="w-1.5 h-1.5 bg-magenta-500 rounded-full mr-2 group-hover:animate-pulse"></span>
                     <span className="group-hover:translate-x-1 transition-transform">
                       Branding Services
+                    </span>
+                  </a>
+                </Link>
+              </li>
+              <li>
+                <Link href="/services">
+                  <a className="text-gray-600 hover:text-magenta-500 transition-colors flex items-center group">
+                    <span className="w-1.5 h-1.5 bg-magenta-500 rounded-full mr-2 group-hover:animate-pulse"></span>
+                    <span className="group-hover:translate-x-1 transition-transform">
+                      Customized Gifts
                     </span>
                   </a>
                 </Link>
@@ -226,6 +228,12 @@ export default function Footer() {
                 <Phone className="h-5 w-5 mr-2 mt-0.5 flex-shrink-0 text-yellow-500 group-hover:text-yellow-600 transition-colors" />
                 <span className="text-gray-600 group-hover:text-gray-800 transition-colors">
                   +91-9818156734
+                </span>
+              </li>
+              <li className="flex items-start group">
+                <Phone className="h-5 w-5 mr-2 mt-0.5 flex-shrink-0 text-yellow-500 group-hover:text-yellow-600 transition-colors" />
+                <span className="text-gray-600 group-hover:text-gray-800 transition-colors">
+                  +91-9814472234
                 </span>
               </li>
               <li className="flex items-start group">

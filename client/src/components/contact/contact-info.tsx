@@ -78,12 +78,12 @@ export default function ContactInfo() {
       </div>
 
       {/* Bottom CMYK Color Strip */}
-      <div className="flex mt-8">
+      {/* <div className="flex mt-8">
         <div className="h-3 w-1/4 bg-cyan-500"></div>
         <div className="h-3 w-1/4 bg-magenta-500"></div>
         <div className="h-3 w-1/4 bg-yellow-400"></div>
         <div className="h-3 w-1/4 bg-black"></div>
-      </div>
+      </div> */}
     </div>
   );
 }
