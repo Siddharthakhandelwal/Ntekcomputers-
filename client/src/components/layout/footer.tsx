@@ -57,13 +57,6 @@ export default function Footer() {
               Professional Designing & Printing services for all your business
               and personal needs.
             </p>
-            {/* <p className="text-gray-600 mb-4">
-              Google Business Profile Id - 1927539426318025459
-              <br />
-              Import Export code - ABWPK0088R
-              <br />
-              GSTIN - 03ABWPK0088R1ZW
-            </p> */}
             <div className="flex space-x-4">
               <a
                 href="#"
@@ -72,7 +65,7 @@ export default function Footer() {
                 <Facebook className="h-5 w-5" />
               </a>
               <a
-                href="#"
+                href="https://www.instagram.com/ntekcomputers/profilecard/?igsh=b2I5djRxNW1pamUx"
                 className="text-gray-400 hover:text-blue-600 transition-colors transform hover:scale-110"
               >
                 <Instagram className="h-5 w-5" />
