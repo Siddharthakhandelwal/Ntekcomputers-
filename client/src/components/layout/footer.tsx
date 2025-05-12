@@ -58,8 +58,11 @@ export default function Footer() {
               and personal needs.
             </p>
             <p className="text-gray-600 mb-4">
-              Google Business Profile - 1927539426318025459 Import Export code -
-              ABWPK0088R GSTIN - 03ABWPK0088R1ZW
+              Google Business Profile - 1927539426318025459
+              <br />
+              Import Export code - ABWPK0088R
+              <br />
+              GSTIN - 03ABWPK0088R1ZW
             </p>
             <div className="flex space-x-4">
               <a
