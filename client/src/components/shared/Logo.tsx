@@ -1,4 +1,5 @@
 import React from "react";
+import logoImage from "@/assets/logo.png";
 
 interface LogoProps {
   className?: string;
@@ -14,7 +15,7 @@ const Logo: React.FC<LogoProps> = ({ className = "", size = "md" }) => {
 
   return (
     <img
-      src="/src/assets/logo.png"
+      src={logoImage}
       alt="Ntek Printing Logo"
       className={`${sizeClasses[size]} ${className}`}
     />
