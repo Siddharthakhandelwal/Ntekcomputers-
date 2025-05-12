@@ -11,6 +11,7 @@ import {
   PenTool,
   Layers,
 } from "lucide-react";
+import Logo from "@/components/shared/Logo";
 
 export default function Footer() {
   return (
@@ -49,13 +50,20 @@ export default function Footer() {
         <div className="grid md:grid-cols-4 gap-8">
           <div>
             <h3 className="text-xl font-bold mb-4 flex items-center">
-              <Printer className="h-5 w-5 mr-2 text-blue-600" />
+              <Logo size="sm" className="mr-2" />
               <span>N-Tek Computers</span>
             </h3>
             <p className="text-gray-600 mb-4">
               Professional Designing & Printing services for all your business
               and personal needs.
             </p>
+            <p className="text-gray-600 mb-4">
+              Google Business Profile - 1927539426318025459
+            </p>
+            <p className="text-gray-600 mb-4">
+              Import Export code - ABWPK0088R
+            </p>
+            <p className="text-gray-600 mb-4">GSTIN - 03ABWPK0088R1ZW</p>
             <div className="flex space-x-4">
               <a
                 href="#"

@@ -2,6 +2,7 @@ import { useState, useEffect } from "react";
 import { Link, useLocation } from "wouter";
 import { Menu, X, Layers, MessageSquare, Info } from "lucide-react";
 import { Button } from "@/components/ui/button";
+import Logo from "@/components/shared/Logo";
 
 export default function Navbar() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
@@ -48,7 +49,8 @@ export default function Navbar() {
       <div className="container mx-auto px-4 py-3">
         <div className="flex justify-between items-center">
           <Link href="/">
-            <a className="flex items-center">
+            <a className="flex items-center space-x-2">
+              <Logo size="sm" />
               <span className="text-2xl font-bold text-gray-800">
                 N-<span className="text-blue-500">Tek</span> Computers
               </span>
