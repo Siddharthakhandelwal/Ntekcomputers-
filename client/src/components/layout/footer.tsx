@@ -57,13 +57,13 @@ export default function Footer() {
               Professional Designing & Printing services for all your business
               and personal needs.
             </p>
-            <p className="text-gray-600 mb-4">
-              Google Business Profile - 1927539426318025459
+            {/* <p className="text-gray-600 mb-4">
+              Google Business Profile Id - 1927539426318025459
               <br />
               Import Export code - ABWPK0088R
               <br />
               GSTIN - 03ABWPK0088R1ZW
-            </p>
+            </p> */}
             <div className="flex space-x-4">
               <a
                 href="#"
@@ -71,12 +71,6 @@ export default function Footer() {
               >
                 <Facebook className="h-5 w-5" />
               </a>
-              {/* <a
-                href="#"
-                className="text-gray-400 hover:text-blue-600 transition-colors transform hover:scale-110"
-              >
-                <Twitter className="h-5 w-5" />
-              </a> */}
               <a
                 href="#"
                 className="text-gray-400 hover:text-blue-600 transition-colors transform hover:scale-110"
@@ -255,6 +249,12 @@ export default function Footer() {
         </div>
 
         <div className="mt-12 pt-8 text-center">
+          <div className="mb-4 text-gray-600 space-y-1">
+            <p>
+              Google Business Profile Id - 1927539426318025459 || Import Export
+              code - ABWPK0088R || GSTIN - 03ABWPK0088R1ZW
+            </p>
+          </div>
           <p className="text-gray-500">
             &copy; {new Date().getFullYear()} N-Tek Computers. All rights
             reserved.
