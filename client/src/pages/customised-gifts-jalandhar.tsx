@@ -1,10 +1,63 @@
-import SEO from "@/components/shared/seo";
+import { useEffect } from "react";
 import { Card, CardContent } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { CheckCircle } from "lucide-react";
 import { Link } from "react-router-dom";
 
 export default function CustomisedGifts() {
+  useEffect(() => {
+    document.title =
+      "Personalized Gift Printing Services in Jalandhar | N-Tek Computers";
+    const metaTags = [
+      {
+        name: "description",
+        content:
+          "Discover our range of personalized gift printing services in Jalandhar. Mugs, t-shirts, photo frames, and more. Unique, affordable, and high-quality customized gifts for all occasions and corporate needs.",
+      },
+      {
+        name: "keywords",
+        content:
+          "customized gifts printing Jalandhar, personalized gift items Punjab, corporate gift solutions Jalandhar, custom mug printing Jalandhar, personalized t-shirt printing Punjab, photo gift services Jalandhar, unique personalized gifts for occasions in Jalandhar, affordable customized corporate gifts Punjab, high-quality photo gift printing services Jalandhar",
+      },
+      {
+        property: "og:title",
+        content:
+          "Personalized Gift Printing Services in Jalandhar | N-Tek Computers",
+      },
+      {
+        property: "og:description",
+        content:
+          "Discover our range of personalized gift printing services in Jalandhar. Mugs, t-shirts, photo frames, and more. Unique, affordable, and high-quality customized gifts for all occasions and corporate needs.",
+      },
+      {
+        property: "og:url",
+        content: "https://ntekcomputers.com/customised-gifts-jalandhar.html",
+      },
+      {
+        name: "twitter:title",
+        content:
+          "Personalized Gift Printing Services in Jalandhar | N-Tek Computers",
+      },
+      {
+        name: "twitter:description",
+        content:
+          "Discover our range of personalized gift printing services in Jalandhar. Mugs, t-shirts, photo frames, and more. Unique, affordable, and high-quality customized gifts for all occasions and corporate needs.",
+      },
+    ];
+    const createdTags: HTMLMetaElement[] = [];
+    metaTags.forEach((tag) => {
+      const meta = document.createElement("meta");
+      Object.entries(tag).forEach(([key, value]) =>
+        meta.setAttribute(key, value)
+      );
+      document.head.appendChild(meta);
+      createdTags.push(meta);
+    });
+    return () => {
+      createdTags.forEach((meta) => meta.remove());
+    };
+  }, []);
+
   const structuredData = {
     "@context": "https://schema.org",
     "@type": "Service",
@@ -73,14 +126,6 @@ export default function CustomisedGifts() {
 
   return (
     <>
-      <SEO
-        title="Customized Gift Printing Services in Jalandhar | N-Tek Computers"
-        description="Create personalized gifts with our custom printing services in Jalandhar. Mugs, t-shirts, photo frames, and more."
-        keywords="customized gift printing Jalandhar, personalized gift items Punjab, photo printing on gifts Jalandhar, custom mug printing services Punjab, personalized t-shirt printing Jalandhar, photo frame printing services Punjab, affordable gift customization Jalandhar, bulk gift printing services Punjab, corporate gift printing solutions Jalandhar"
-        structuredData={[structuredData, faqStructuredData]}
-        ogUrl="https://ntekcomputers.com/customised-gifts-jalandhar.html"
-      />
-
       <main className="container mx-auto px-4 py-12">
         <h1 className="text-4xl font-bold text-center mb-8">
           Customized Gift Printing Services in Jalandhar

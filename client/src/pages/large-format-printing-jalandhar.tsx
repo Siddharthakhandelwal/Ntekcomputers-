@@ -1,10 +1,64 @@
-import SEO from "@/components/shared/seo";
+import { useEffect } from "react";
 import { Card, CardContent } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { CheckCircle } from "lucide-react";
 import { Link } from "react-router-dom";
 
 export default function LargeFormatPrinting() {
+  useEffect(() => {
+    document.title =
+      "Large Format Printing Services in Jalandhar | N-Tek Computers";
+    const metaTags = [
+      {
+        name: "description",
+        content:
+          "High-resolution large format printing services in Jalandhar and Punjab. Banners, posters, outdoor signage, and exhibition displays. Durable, custom, and affordable solutions for all your wide format needs.",
+      },
+      {
+        name: "keywords",
+        content:
+          "large format printing services Jalandhar, wide format printing Punjab, banner and poster printing Jalandhar, vinyl printing services Jalandhar, outdoor signage printing Punjab, exhibition display printing Jalandhar, high-resolution large format prints in Jalandhar, durable outdoor banners and posters Punjab, custom exhibition display printing services Jalandhar",
+      },
+      {
+        property: "og:title",
+        content:
+          "Large Format Printing Services in Jalandhar | N-Tek Computers",
+      },
+      {
+        property: "og:description",
+        content:
+          "High-resolution large format printing services in Jalandhar and Punjab. Banners, posters, outdoor signage, and exhibition displays. Durable, custom, and affordable solutions for all your wide format needs.",
+      },
+      {
+        property: "og:url",
+        content:
+          "https://ntekcomputers.com/large-format-printing-jalandhar.html",
+      },
+      {
+        name: "twitter:title",
+        content:
+          "Large Format Printing Services in Jalandhar | N-Tek Computers",
+      },
+      {
+        name: "twitter:description",
+        content:
+          "High-resolution large format printing services in Jalandhar and Punjab. Banners, posters, outdoor signage, and exhibition displays. Durable, custom, and affordable solutions for all your wide format needs.",
+      },
+    ];
+    const createdTags: HTMLMetaElement[] = [];
+    metaTags.forEach((tag) => {
+      const meta = document.createElement("meta");
+      Object.entries(tag).forEach(([key, value]) =>
+        meta.setAttribute(key, value)
+      );
+      document.head.appendChild(meta);
+      createdTags.push(meta);
+    });
+    return () => {
+      createdTags.forEach((meta) => meta.remove());
+    };
+  }, []);
+
   const structuredData = {
     "@context": "https://schema.org",
     "@type": "Service",
@@ -73,14 +127,6 @@ export default function LargeFormatPrinting() {
 
   return (
     <>
-      <SEO
-        title="Large Format Printing Services in Jalandhar | N-Tek Computers"
-        description="Professional large format printing services in Jalandhar. Banners, posters, vehicle wraps, and more."
-        keywords="large format printing Jalandhar, banner printing services Punjab, vehicle wrap printing Jalandhar, poster printing services Punjab, outdoor advertising prints Jalandhar, indoor display printing Punjab, high-quality large format prints Jalandhar, custom banner printing services Punjab, professional large format solutions Jalandhar"
-        structuredData={[structuredData, faqStructuredData]}
-        ogUrl="https://ntekcomputers.com/large-format-printing-jalandhar.html"
-      />
-
       <main className="container mx-auto px-4 py-12">
         <h1 className="text-4xl font-bold text-center mb-8">
           Large Format Printing Services in Jalandhar

@@ -1,10 +1,61 @@
-import SEO from "@/components/shared/seo";
+import { useEffect } from "react";
 import { Card, CardContent } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { CheckCircle } from "lucide-react";
 import { Link } from "react-router-dom";
 
 export default function DesignServices() {
+  useEffect(() => {
+    document.title =
+      "Professional Design Services in Jalandhar | N-Tek Computers";
+    const metaTags = [
+      {
+        name: "description",
+        content:
+          "Elevate your brand with our professional design services in Jalandhar. Logos, brochures, business cards, and more tailored to your needs. Affordable, custom, and high-quality graphic design solutions for businesses in Punjab.",
+      },
+      {
+        name: "keywords",
+        content:
+          "graphic design services Jalandhar, custom design solutions Punjab, professional design services Jalandhar, logo design Jalandhar, brochure design services Punjab, business card design Jalandhar, affordable graphic design services for small businesses in Jalandhar, custom logo and branding design Punjab, high-quality brochure and flyer design Jalandhar",
+      },
+      {
+        property: "og:title",
+        content: "Professional Design Services in Jalandhar | N-Tek Computers",
+      },
+      {
+        property: "og:description",
+        content:
+          "Elevate your brand with our professional design services in Jalandhar. Logos, brochures, business cards, and more tailored to your needs. Affordable, custom, and high-quality graphic design solutions for businesses in Punjab.",
+      },
+      {
+        property: "og:url",
+        content: "https://ntekcomputers.com/design-services-jalandhar.html",
+      },
+      {
+        name: "twitter:title",
+        content: "Professional Design Services in Jalandhar | N-Tek Computers",
+      },
+      {
+        name: "twitter:description",
+        content:
+          "Elevate your brand with our professional design services in Jalandhar. Logos, brochures, business cards, and more tailored to your needs. Affordable, custom, and high-quality graphic design solutions for businesses in Punjab.",
+      },
+    ];
+    const createdTags: HTMLMetaElement[] = [];
+    metaTags.forEach((tag) => {
+      const meta = document.createElement("meta");
+      Object.entries(tag).forEach(([key, value]) =>
+        meta.setAttribute(key, value)
+      );
+      document.head.appendChild(meta);
+      createdTags.push(meta);
+    });
+    return () => {
+      createdTags.forEach((meta) => meta.remove());
+    };
+  }, []);
+
   const structuredData = {
     "@context": "https://schema.org",
     "@type": "Service",
@@ -73,14 +124,6 @@ export default function DesignServices() {
 
   return (
     <>
-      <SEO
-        title="Professional Design Services in Jalandhar | N-Tek Computers"
-        description="Professional design services in Jalandhar. Graphic design, logo design, and marketing material design."
-        keywords="design services Jalandhar, graphic design company Punjab, logo design services Jalandhar, marketing material design Punjab, brand identity design Jalandhar, print design services Punjab, professional design solutions Jalandhar, custom design services Punjab, creative design agency Jalandhar"
-        structuredData={[structuredData, faqStructuredData]}
-        ogUrl="https://ntekcomputers.com/design-services-jalandhar.html"
-      />
-
       <main className="container mx-auto px-4 py-12">
         <h1 className="text-4xl font-bold text-center mb-8">
           Professional Design Services in Jalandhar

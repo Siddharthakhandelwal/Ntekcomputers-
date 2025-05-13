@@ -1,9 +1,59 @@
-import SEO from "@/components/shared/seo";
+import { useEffect } from "react";
 import { Card, CardContent } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { CheckCircle } from "lucide-react";
 
 export default function DigitalPrinting() {
+  useEffect(() => {
+    document.title = "Digital Printing Services in Jalandhar | N-Tek Computers";
+    const metaTags = [
+      {
+        name: "description",
+        content:
+          "Get high-quality, affordable digital printing services in Jalandhar and Punjab. Brochures, flyers, business cards, and custom digital prints for small businesses. Same-day and eco-friendly solutions available.",
+      },
+      {
+        name: "keywords",
+        content:
+          "digital printing services in Jalandhar, digital printing company Punjab, custom digital prints Jalandhar, brochure printing Jalandhar, flyer printing services Punjab, business card printing Jalandhar, high-quality digital prints Punjab, affordable digital printing for small businesses in Jalandhar, same-day digital printing services in Punjab, eco-friendly digital printing solutions Jalandhar",
+      },
+      {
+        property: "og:title",
+        content: "Digital Printing Services in Jalandhar | N-Tek Computers",
+      },
+      {
+        property: "og:description",
+        content:
+          "Get high-quality, affordable digital printing services in Jalandhar and Punjab. Brochures, flyers, business cards, and custom digital prints for small businesses. Same-day and eco-friendly solutions available.",
+      },
+      {
+        property: "og:url",
+        content: "https://ntekcomputers.com/digital-printing-jalandhar.html",
+      },
+      {
+        name: "twitter:title",
+        content: "Digital Printing Services in Jalandhar | N-Tek Computers",
+      },
+      {
+        name: "twitter:description",
+        content:
+          "Get high-quality, affordable digital printing services in Jalandhar and Punjab. Brochures, flyers, business cards, and custom digital prints for small businesses. Same-day and eco-friendly solutions available.",
+      },
+    ];
+    const createdTags: HTMLMetaElement[] = [];
+    metaTags.forEach((tag) => {
+      const meta = document.createElement("meta");
+      Object.entries(tag).forEach(([key, value]) =>
+        meta.setAttribute(key, value)
+      );
+      document.head.appendChild(meta);
+      createdTags.push(meta);
+    });
+    return () => {
+      createdTags.forEach((meta) => meta.remove());
+    };
+  }, []);
+
   const structuredData = {
     "@context": "https://schema.org",
     "@type": "Service",
@@ -36,14 +86,6 @@ export default function DigitalPrinting() {
 
   return (
     <>
-      <SEO
-        title="Professional Digital Printing Services in Jalandhar | N-Tek Computers"
-        description="Offering high-quality digital printing services in Jalandhar. Brochures, flyers, business cards, and more. Fast turnaround and competitive pricing."
-        keywords="digital printing services in Jalandhar, digital printing company Punjab, custom digital prints Jalandhar, brochure printing Jalandhar, flyer printing services Punjab, business card printing Jalandhar, high-quality digital prints Punjab, affordable digital printing for small businesses in Jalandhar, same-day digital printing services in Punjab, eco-friendly digital printing solutions Jalandhar"
-        structuredData={structuredData}
-        ogUrl="https://ntekcomputers.com/digital-printing-jalandhar.html"
-      />
-
       <main className="container mx-auto px-4 py-12">
         <h1 className="text-4xl font-bold text-center mb-8">
           Top-Quality Digital Printing Services in Jalandhar

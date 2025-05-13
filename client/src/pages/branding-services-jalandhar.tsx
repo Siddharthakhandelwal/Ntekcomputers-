@@ -1,9 +1,59 @@
-import SEO from "@/components/shared/seo";
+import { useEffect } from "react";
 import { Card, CardContent } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { CheckCircle } from "lucide-react";
 
 export default function BrandingServices() {
+  useEffect(() => {
+    document.title = "Branding Services in Jalandhar | N-Tek Computers";
+    const metaTags = [
+      {
+        name: "description",
+        content:
+          "Professional branding services in Jalandhar and Punjab. Brand identity development, logo design, and comprehensive brand strategy for startups and businesses. Affordable packages and expert solutions.",
+      },
+      {
+        name: "keywords",
+        content:
+          "branding services in Jalandhar, brand identity development Punjab, logo design company Jalandhar, corporate branding solutions Punjab, brand strategy services Jalandhar, visual identity design Punjab, affordable branding packages for startups in Jalandhar, comprehensive brand development services Punjab, expert logo design and branding Jalandhar",
+      },
+      {
+        property: "og:title",
+        content: "Branding Services in Jalandhar | N-Tek Computers",
+      },
+      {
+        property: "og:description",
+        content:
+          "Professional branding services in Jalandhar and Punjab. Brand identity development, logo design, and comprehensive brand strategy for startups and businesses. Affordable packages and expert solutions.",
+      },
+      {
+        property: "og:url",
+        content: "https://ntekcomputers.com/branding-services-jalandhar.html",
+      },
+      {
+        name: "twitter:title",
+        content: "Branding Services in Jalandhar | N-Tek Computers",
+      },
+      {
+        name: "twitter:description",
+        content:
+          "Professional branding services in Jalandhar and Punjab. Brand identity development, logo design, and comprehensive brand strategy for startups and businesses. Affordable packages and expert solutions.",
+      },
+    ];
+    const createdTags: HTMLMetaElement[] = [];
+    metaTags.forEach((tag) => {
+      const meta = document.createElement("meta");
+      Object.entries(tag).forEach(([key, value]) =>
+        meta.setAttribute(key, value)
+      );
+      document.head.appendChild(meta);
+      createdTags.push(meta);
+    });
+    return () => {
+      createdTags.forEach((meta) => meta.remove());
+    };
+  }, []);
+
   const structuredData = {
     "@context": "https://schema.org",
     "@type": "Service",
@@ -35,14 +85,6 @@ export default function BrandingServices() {
 
   return (
     <>
-      <SEO
-        title="Expert Branding Services in Jalandhar | N-Tek Computers"
-        description="Build a strong brand identity with our expert branding services in Jalandhar. Logo design, brand strategy, and more."
-        keywords="branding services in Jalandhar, brand identity development Punjab, logo design company Jalandhar, corporate branding solutions Punjab, brand strategy services Jalandhar, visual identity design Punjab, affordable branding packages for startups in Jalandhar, comprehensive brand development services Punjab, expert logo design and branding Jalandhar"
-        structuredData={structuredData}
-        ogUrl="https://ntekcomputers.com/branding-services-jalandhar.html"
-      />
-
       <main className="container mx-auto px-4 py-12">
         <h1 className="text-4xl font-bold text-center mb-8">
           Comprehensive Branding Services in Jalandhar

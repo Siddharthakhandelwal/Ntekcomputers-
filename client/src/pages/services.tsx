@@ -57,9 +57,55 @@ const services = [
 ];
 
 export default function Services() {
-  // Set document title on mount
   useEffect(() => {
-    document.title = "Services - N-Tek Computers";
+    document.title =
+      "Printing & Branding Services in Jalandhar | N-Tek Computers";
+    const metaTags = [
+      {
+        name: "description",
+        content:
+          "Explore our comprehensive range of printing, branding, design, and marketing services in Jalandhar. Digital printing, large format, business stationery, marketing materials, design, branding, and customized gifts. High-quality, affordable, and fast turnaround.",
+      },
+      {
+        name: "keywords",
+        content:
+          "digital printing services in Jalandhar, large format printing Jalandhar, business stationery printing Jalandhar, marketing materials printing Jalandhar, branding services in Jalandhar, design services Jalandhar, customized gifts Jalandhar, custom digital prints, brochure printing, flyer printing, business card printing, high-quality prints, affordable printing, custom printing solutions, professional branding, logo design, corporate gifts, promotional materials, same-day printing, eco-friendly printing, Punjab, N-Tek Computers",
+      },
+      {
+        property: "og:title",
+        content: "Printing & Branding Services in Jalandhar | N-Tek Computers",
+      },
+      {
+        property: "og:description",
+        content:
+          "Explore our comprehensive range of printing, branding, design, and marketing services in Jalandhar. Digital printing, large format, business stationery, marketing materials, design, branding, and customized gifts. High-quality, affordable, and fast turnaround.",
+      },
+      {
+        property: "og:url",
+        content: "https://ntekcomputers.com/services.html",
+      },
+      {
+        name: "twitter:title",
+        content: "Printing & Branding Services in Jalandhar | N-Tek Computers",
+      },
+      {
+        name: "twitter:description",
+        content:
+          "Explore our comprehensive range of printing, branding, design, and marketing services in Jalandhar. Digital printing, large format, business stationery, marketing materials, design, branding, and customized gifts. High-quality, affordable, and fast turnaround.",
+      },
+    ];
+    const createdTags: HTMLMetaElement[] = [];
+    metaTags.forEach((tag) => {
+      const meta = document.createElement("meta");
+      Object.entries(tag).forEach(([key, value]) =>
+        meta.setAttribute(key, value)
+      );
+      document.head.appendChild(meta);
+      createdTags.push(meta);
+    });
+    return () => {
+      createdTags.forEach((meta) => meta.remove());
+    };
   }, []);
 
   return (

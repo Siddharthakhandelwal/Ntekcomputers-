@@ -1,10 +1,63 @@
-import SEO from "@/components/shared/seo";
+import { useEffect } from "react";
 import { Card, CardContent } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { CheckCircle } from "lucide-react";
 import { Link } from "react-router-dom";
 
 export default function MarketingMaterials() {
+  useEffect(() => {
+    document.title =
+      "Marketing Materials Printing Services in Jalandhar | N-Tek Computers";
+    const metaTags = [
+      {
+        name: "description",
+        content:
+          "Affordable and high-quality marketing materials printing in Jalandhar and Punjab. Brochures, flyers, promotional materials, and custom marketing collateral for small and large businesses.",
+      },
+      {
+        name: "keywords",
+        content:
+          "marketing materials printing Jalandhar, promotional materials Punjab, custom marketing collateral Jalandhar, brochure printing services Jalandhar, flyer design and printing Punjab, business promotional materials Jalandhar, affordable marketing materials for small and large businesses in Jalandhar, high-quality promotional printing services Punjab, custom-designed marketing collateral Jalandhar",
+      },
+      {
+        property: "og:title",
+        content:
+          "Marketing Materials Printing Services in Jalandhar | N-Tek Computers",
+      },
+      {
+        property: "og:description",
+        content:
+          "Affordable and high-quality marketing materials printing in Jalandhar and Punjab. Brochures, flyers, promotional materials, and custom marketing collateral for small and large businesses.",
+      },
+      {
+        property: "og:url",
+        content: "https://ntekcomputers.com/marketing-materials-jalandhar.html",
+      },
+      {
+        name: "twitter:title",
+        content:
+          "Marketing Materials Printing Services in Jalandhar | N-Tek Computers",
+      },
+      {
+        name: "twitter:description",
+        content:
+          "Affordable and high-quality marketing materials printing in Jalandhar and Punjab. Brochures, flyers, promotional materials, and custom marketing collateral for small and large businesses.",
+      },
+    ];
+    const createdTags: HTMLMetaElement[] = [];
+    metaTags.forEach((tag) => {
+      const meta = document.createElement("meta");
+      Object.entries(tag).forEach(([key, value]) =>
+        meta.setAttribute(key, value)
+      );
+      document.head.appendChild(meta);
+      createdTags.push(meta);
+    });
+    return () => {
+      createdTags.forEach((meta) => meta.remove());
+    };
+  }, []);
+
   const structuredData = {
     "@context": "https://schema.org",
     "@type": "Service",
@@ -73,14 +126,6 @@ export default function MarketingMaterials() {
 
   return (
     <>
-      <SEO
-        title="Marketing Materials Printing Services in Jalandhar | N-Tek Computers"
-        description="Professional marketing materials printing in Jalandhar. Brochures, flyers, catalogs, and promotional materials."
-        keywords="marketing materials printing Jalandhar, promotional material printing Punjab, brochure printing services Jalandhar, catalog printing Punjab, flyer printing services Jalandhar, marketing collateral printing Punjab, high-quality marketing prints Jalandhar, custom marketing material design Punjab, professional marketing solutions Jalandhar"
-        structuredData={[structuredData, faqStructuredData]}
-        ogUrl="https://ntekcomputers.com/marketing-materials-jalandhar.html"
-      />
-
       <main className="container mx-auto px-4 py-12">
         <h1 className="text-4xl font-bold text-center mb-8">
           Marketing Materials Printing Services in Jalandhar

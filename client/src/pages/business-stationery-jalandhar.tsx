@@ -1,9 +1,60 @@
-import SEO from "@/components/shared/seo";
+import { useEffect } from "react";
 import { Card, CardContent } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { CheckCircle } from "lucide-react";
 
 export default function BusinessStationery() {
+  useEffect(() => {
+    document.title =
+      "Business Stationery Printing in Jalandhar | N-Tek Computers";
+    const metaTags = [
+      {
+        name: "description",
+        content:
+          "Premium business stationery printing in Jalandhar and Punjab. Custom stationery design, letterhead printing, envelopes, and professional office stationery solutions for businesses. Affordable packages available.",
+      },
+      {
+        name: "keywords",
+        content:
+          "business stationery printing Jalandhar, custom stationery design Punjab, corporate stationery services Jalandhar, letterhead printing Jalandhar, envelope design services Punjab, personalized office stationery Jalandhar, premium business stationery packages in Jalandhar, affordable custom stationery printing Punjab, professional office stationery solutions Jalandhar",
+      },
+      {
+        property: "og:title",
+        content: "Business Stationery Printing in Jalandhar | N-Tek Computers",
+      },
+      {
+        property: "og:description",
+        content:
+          "Premium business stationery printing in Jalandhar and Punjab. Custom stationery design, letterhead printing, envelopes, and professional office stationery solutions for businesses. Affordable packages available.",
+      },
+      {
+        property: "og:url",
+        content: "https://ntekcomputers.com/business-stationery-jalandhar.html",
+      },
+      {
+        name: "twitter:title",
+        content: "Business Stationery Printing in Jalandhar | N-Tek Computers",
+      },
+      {
+        name: "twitter:description",
+        content:
+          "Premium business stationery printing in Jalandhar and Punjab. Custom stationery design, letterhead printing, envelopes, and professional office stationery solutions for businesses. Affordable packages available.",
+      },
+    ];
+    const createdTags: HTMLMetaElement[] = [];
+    metaTags.forEach((tag) => {
+      const meta = document.createElement("meta");
+      Object.entries(tag).forEach(([key, value]) =>
+        meta.setAttribute(key, value)
+      );
+      document.head.appendChild(meta);
+      createdTags.push(meta);
+    });
+    return () => {
+      createdTags.forEach((meta) => meta.remove());
+    };
+  }, []);
+
   const structuredData = {
     "@context": "https://schema.org",
     "@type": "Service",
@@ -35,14 +86,6 @@ export default function BusinessStationery() {
 
   return (
     <>
-      <SEO
-        title="Custom Business Stationery Printing in Jalandhar | N-Tek Computers"
-        description="Enhance your corporate image with our custom business stationery printing services in Jalandhar. Letterheads, envelopes, and more."
-        keywords="business stationery printing Jalandhar, custom stationery design Punjab, corporate stationery services Jalandhar, letterhead printing Jalandhar, envelope design services Punjab, personalized office stationery Jalandhar, premium business stationery packages in Jalandhar, affordable custom stationery printing Punjab, professional office stationery solutions Jalandhar"
-        structuredData={structuredData}
-        ogUrl="https://ntekcomputers.com/business-stationery-jalandhar.html"
-      />
-
       <main className="container mx-auto px-4 py-12">
         <h1 className="text-4xl font-bold text-center mb-8">
           Professional Business Stationery Printing in Jalandhar
